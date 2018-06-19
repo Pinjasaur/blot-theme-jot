@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+<body>
+  {{> header}}
+
+  {{#entry}}
+  <article class="entry">
+
+    {{{html}}}
+
+    {{#date}}
+    <small>Posted on {{date}}</small>
+    {{/date}}
+
+    {{#tags.length}}
+    <small>
+      {{#tags}}
+        <a href="/tagged/{{slug}}">#{{name}}</a>  
+      {{/tags}}
+    </small>
+    {{/tags.length}}
+
+    {{> pluginHTML}}
+
+  </article>
+
+  <hr class="full">
+
+  {{#adjacent}}
+  <br>
+  {{/adjacent}}
+
+
+  {{#next}}
+  <small><a href="{{url}}">← Next post</a></small>
+  {{/next}}
+
+  {{#next}}{{#previous}}<small>   ·   </small>{{/previous}}{{/next}}
+
+  {{#previous}}
+  <small><a href="{{url}}">Previous post →</a></small>
+  {{/previous}}
+
+  <br>
+
+  {{/entry}}
+
+  {{> footer}}
+</body>
+</html>
