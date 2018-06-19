@@ -38,7 +38,7 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 
 #logo {font-weight: bold;display: inline-block;line-height: 1.75}
 #logo img {max-width: 8em;max-height:8em;margin-bottom: 0.25em}
-#logo img.rounded {border-radius: 50%;margin-left: -1em}
+#logo img.rounded {border-radius: 50%;}
 
 #logo:hover {opacity: 0.8;background: none;color: inherit;}
 #logo:active {opacity: 0.75}
@@ -324,4 +324,20 @@ iframe {width: 100%;}
 
 @media screen and (max-width: 400px) {
   body {font-size: 0.9rem;padding: 0.5rem;margin: 0}
+}
+
+/**
+ * Jot.
+ */
+
+.footer {
+  text-align: center;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer li {
+  display: inline-block;
 }

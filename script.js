@@ -1,6 +1,7 @@
+/* This template tag is replaced by JS when this file is rendered */
 {{{appJS}}}
 
-// Thanks to CodePen:
+// Thanks CodePen:
 // https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
 (function() {
 
