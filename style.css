@@ -88,17 +88,17 @@ input[name=q] {
 }
 
 input[type=submit] {
-    display: inline-block;
-    padding: 0.444em 0.666em;
-    font-size: inherit;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding-left: 2em;
-    border: 1px solid #ccc;
-    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1zZWFyY2giIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJzZWFyY2giIGQ9Ik03Ljk5LDYuOTI4TDUuODQ3LDQuNzg0YzAuMjg5LTAuNDc2LDAuNDU4LTEuMDMzLDAuNDU4LTEuNjNDNi4zMDUsMS40MTIsNC44OTUsMCwzLjE1MiwwDQoJQzEuNDExLDAsMCwxLjQxMiwwLDMuMTU0YzAsMS43NDEsMS40MTIsMy4xNTEsMy4xNTMsMy4xNTFjMC41OTcsMCwxLjE1NC0wLjE2OSwxLjYzLTAuNDU4bDIuMTQ1LDIuMTQ2TDcuOTksNi45Mjh6IE0xLjIwMywzLjE1NA0KCWMwLjAwMi0xLjA3NywwLjg3NC0xLjk0OSwxLjk1MS0xLjk1MWMxLjA3NiwwLjAwMiwxLjk0OCwwLjg3NCwxLjk0OSwxLjk1MUM1LjEwMSw0LjIzLDQuMjI5LDUuMTAzLDMuMTUzLDUuMTAzDQoJQzIuMDc1LDUuMTAzLDEuMjA1LDQuMjMsMS4yMDMsMy4xNTR6Ii8+DQo8L3N2Zz4=) 0.8em center/0.8em no-repeat;
+  display: inline-block;
+  padding: 0.444em 0.666em;
+  font-size: inherit;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding-left: 2em;
+  border: 1px solid #ccc;
+  background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1zZWFyY2giIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJzZWFyY2giIGQ9Ik03Ljk5LDYuOTI4TDUuODQ3LDQuNzg0YzAuMjg5LTAuNDc2LDAuNDU4LTEuMDMzLDAuNDU4LTEuNjNDNi4zMDUsMS40MTIsNC44OTUsMCwzLjE1MiwwDQoJQzEuNDExLDAsMCwxLjQxMiwwLDMuMTU0YzAsMS43NDEsMS40MTIsMy4xNTEsMy4xNTMsMy4xNTFjMC41OTcsMCwxLjE1NC0wLjE2OSwxLjYzLTAuNDU4bDIuMTQ1LDIuMTQ2TDcuOTksNi45Mjh6IE0xLjIwMywzLjE1NA0KCWMwLjAwMi0xLjA3NywwLjg3NC0xLjk0OSwxLjk1MS0xLjk1MWMxLjA3NiwwLjAwMiwxLjk0OCwwLjg3NCwxLjk0OSwxLjk1MUM1LjEwMSw0LjIzLDQuMjI5LDUuMTAzLDMuMTUzLDUuMTAzDQoJQzIuMDc1LDUuMTAzLDEuMjA1LDQuMjMsMS4yMDMsMy4xNTR6Ii8+DQo8L3N2Zz4=) 0.8em center/0.8em no-repeat;
 
 }
 
@@ -178,7 +178,7 @@ img {vertical-align: middle;max-width: 100%;height: auto;}
 
 /* VIDEOS & tweets */
 /* Only apply vertical margin to direct
-   descendants, prevents multi margins */
+descendants, prevents multi margins */
 
 iframe {width: 100%;}
 .entry > iframe {margin: 1.25em 0!important;}

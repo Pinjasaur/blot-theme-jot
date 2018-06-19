@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
-  {{> head}}
-  <body>
+{{> head}}
+<body>
 
-    {{> header}}
+  {{> header}}
 
-    <small style="margin-top: -.625em;display: block;">
+  <small style="margin-top: -.625em;display: block;">
     {{#pagination.previous}}Page {{pagination.current}} of {{pagination.total}}{{/pagination.previous}}
     {{^pagination.previous}}Latest posts:{{/pagination.previous}}
-    </small>
+  </small>
 
-    <br><br>
+  <br><br>
 
-    {{#entries}}
-    <a href="{{url}}" class="row"><b>{{title}}</b>&nbsp;{{#date}}&nbsp;·&nbsp;&nbsp;<span style="white-space: nowrap;">{{date}}</span>{{/date}}</a>
-    {{/entries}}
+  {{#entries}}
+  <a href="{{url}}" class="row"><b>{{title}}</b>&nbsp;{{#date}}&nbsp;·&nbsp;&nbsp;<span style="white-space: nowrap;">{{date}}</span>{{/date}}</a>
+  {{/entries}}
 
-    <br><br><br>
+  <br><br><br>
 
-    {{#pagination}}
+  {{#pagination}}
 
-      {{#previous}}
-      <a class="menu" href="/page/{{previous}}">&larr;&nbsp;Newer posts</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      {{/previous}}
+  {{#previous}}
+  <a class="menu" href="/page/{{previous}}">&larr;&nbsp;Newer posts</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {{/previous}}
 
-      {{#next}}
-      <a class="menu" href="/page/{{next}}">Next page &rarr;</a>
-      {{/next}}
+  {{#next}}
+  <a class="menu" href="/page/{{next}}">Next page &rarr;</a>
+  {{/next}}
 
-      <hr class="full">
+  <hr class="full">
 
-      <div style="text-align: right;">
-      <small>Page {{current}} of {{total}}</small>
-      </div>
+  <div style="text-align: right;">
+    <small>Page {{current}} of {{total}}</small>
+  </div>
 
-    {{/pagination}}
+  {{/pagination}}
 
-    <br>
+  <br>
 
-    {{> footer}}
-  </body>
+  {{> footer}}
+</body>
 </html>

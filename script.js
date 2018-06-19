@@ -1,12 +1,10 @@
 {{{appJS}}}
 
-// This script is embedded in the footer of every page
-
 // Thanks to CodePen:
 // https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
 (function() {
 
-  function slugify(text) {
+  function slugify (text) {
     return text.toString().toLowerCase().trim()
       .replace(/\s+/g, '-') // Replace spaces with -
       .replace(/&/g, '-and-') // Replace & with 'and'

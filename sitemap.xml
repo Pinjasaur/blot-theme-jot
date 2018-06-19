@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>{{blogURL}}</loc> 
+    <loc>{{blogURL}}</loc>
   </url>
   <url>
-    <loc>{{blogURL}}/archives/</loc> 
+    <loc>{{blogURL}}/archives/</loc>
   </url>
-  {{#pages}}  
+  {{#pages}}
   <url>
-    <loc>{{blogURL}}{{url}}/</loc> 
+    <loc>{{blogURL}}{{url}}/</loc>
   </url>
-  {{/pages}}    
-  {{#allEntries}}  
+  {{/pages}}
+  {{#allEntries}}
   <url>
-    <loc>{{blogURL}}{{url}}/</loc> 
+    <loc>{{blogURL}}{{url}}/</loc>
   </url>
-  {{/allEntries}}  
+  {{/allEntries}}
 </urlset>
