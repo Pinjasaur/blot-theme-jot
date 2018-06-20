@@ -151,8 +151,9 @@ p code {
 }
 
 pre code {
-  display: block;padding: 12px 24px;
-  margin: 0 -18px 0 -18px;
+  display: block;
+  padding: .8rem 1.5rem;
+  margin: 0 -1rem;
   background-color: rgba(0,0,0,.02);
   border-radius: 0;
 }
