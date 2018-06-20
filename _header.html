@@ -1,14 +1,17 @@
-<a href="/" id="logo">
-  {{#avatar}}
-  <img src="{{{avatar_url}}}" class="{{#roundAvatar}}rounded{{/roundAvatar}}" alt="{{title}}"/><br>
-  {{/avatar}}
-  {{title}}
-</a>
-<br>
+<header class="header">
 
-{{#menu}}
-<a class="menu" href="{{{url}}}" title="{{label}}">{{label}}</a>
-{{/menu}}
+  <a href="/" id="logo">
+    {{#avatar}}
+    <img src="{{{avatar_url}}}" class="{{#roundAvatar}}rounded{{/roundAvatar}}" alt="{{title}}"><br>
+    {{/avatar}}
+    <h1>{{title}}</h1>
+  </a>
+  <br>
 
-<br><br>
-<hr class="full">
+  {{#menu}}
+  <a class="menu" href="{{{url}}}" title="{{label}}">{{label}}</a>
+  {{/menu}}
+
+  <hr class="full">
+
+</header>

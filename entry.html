@@ -7,19 +7,32 @@
   {{#entry}}
   <article class="entry">
 
-    {{{html}}}
+    {{{titleTag}}}
 
     {{#date}}
-    <small>Posted on {{date}}</small>
+    <p>
+      <small>Posted on {{date}}</small>
+    </p>
     {{/date}}
 
-    {{#tags.length}}
-    <small>
-      {{#tags}}
-        <a href="/tagged/{{slug}}">#{{name}}</a>  
-      {{/tags}}
-    </small>
-    {{/tags.length}}
+    <hr>
+
+    {{{body}}}
+
+    <hr>
+
+    {{#date}}
+    <p>
+      <small>Posted on {{date}}</small><br>
+      {{#tags.length}}
+      <small>
+        {{#tags}}
+          <a href="/tagged/{{slug}}">#{{name}}</a>  
+        {{/tags}}
+      </small>
+      {{/tags.length}}
+    </p>
+    {{/date}}
 
     {{> pluginHTML}}
 
@@ -31,18 +44,17 @@
   <br>
   {{/adjacent}}
 
+  <div class="text-center">
+    {{#next}}
+    <small><a href="{{url}}">&laquo; Next post</a></small>
+    {{/next}}
 
-  {{#next}}
-  <small><a href="{{url}}">← Next post</a></small>
-  {{/next}}
+    {{#next}}{{#previous}}<small> &ndash; </small>{{/previous}}{{/next}}
 
-  {{#next}}{{#previous}}<small>   ·   </small>{{/previous}}{{/next}}
-
-  {{#previous}}
-  <small><a href="{{url}}">Previous post →</a></small>
-  {{/previous}}
-
-  <br>
+    {{#previous}}
+    <small><a href="{{url}}">Previous post &raquo;</a></small>
+    {{/previous}}
+  </div>
 
   {{/entry}}
 

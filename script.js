@@ -19,11 +19,13 @@
 
     var $el = $(this);
 
+    $el.addClass("header-has-hash");
+
     var idToLink = slugify($el.text()) + '-' + index;
 
     var $headerLink = $("<a />", {
       html: "#",
-      class: "article-header-hash",
+      class: "header-hash",
       href: "#" + idToLink,
       id: idToLink
     });

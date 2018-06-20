@@ -10,13 +10,15 @@
     {{^pagination.previous}}Latest posts:{{/pagination.previous}}
   </small>
 
-  <br><br>
+  <br>
 
   {{#entries}}
-  <a href="{{url}}" class="row"><b>{{title}}</b>&nbsp;{{#date}}&nbsp;·&nbsp;&nbsp;<span style="white-space: nowrap;">{{date}}</span>{{/date}}</a>
+  <a href="{{url}}" class="row">
+    <b>{{title}}</b>&nbsp;{{#date}}&nbsp;&mdash;&nbsp;<span style="white-space: nowrap;">{{date}}</span>{{/date}}<br>
+  </a>
   {{/entries}}
 
-  <br><br><br>
+  <br><br>
 
   {{#pagination}}
 
