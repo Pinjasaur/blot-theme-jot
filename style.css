@@ -361,12 +361,12 @@ iframe {width: 100%;}
   text-align: center;
 }
 
-.footer ul {
-  list-style-type: none;
+.footer p {
+  margin-bottom: .5em;
 }
 
-.footer li {
-  display: inline-block;
+.footer p + p {
+  margin-top: 0;
 }
 
 .text-center {
@@ -425,4 +425,8 @@ a.header-hash:hover {
   display: inline-block;
   padding-bottom: .5em;
   border-bottom: 1px solid #eee;
+}
+
+.header .title {
+  font-size: 1.5em;
 }
