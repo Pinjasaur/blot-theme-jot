@@ -12,11 +12,17 @@
   <hr>
   <h3 class="archive">{{month}} {{year}}&nbsp;&nbsp;<small>{{entries.length}} post{{s}}</small></h3>
 
-  <small>
+  <div class="entries">
     {{#entries}}
-    <a class="archive" href="{{url}}">{{title}}</a>
+    <a class="archive" href="{{url}}">
+      <b>{{title}}</b>
+      {{#metadata.tldr}}
+      <br>
+      <small>{{{metadata.tldr}}}</small>
+      {{/metadata.tldr}}
+    </a>
     {{/entries}}
-  </small>
+  </div>
 
   <br>
   {{/months}}

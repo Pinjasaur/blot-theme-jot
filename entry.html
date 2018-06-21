@@ -7,15 +7,15 @@
   {{#entry}}
   <article class="entry">
 
-    {{{titleTag}}}
+    <h1 class="entry-title">
+      {{title}}
+    </h1>
 
     {{#date}}
-    <p>
-      <small>Posted on {{date}}</small>
+    <p class="entry-date">
+      <small>{{date}}</small>
     </p>
     {{/date}}
-
-    <hr>
 
     {{{body}}}
 
@@ -23,7 +23,7 @@
 
     {{#date}}
     <p>
-      <small>Posted on {{date}}</small><br>
+      <small>Posted on {{date}}</small>
       {{#tags.length}}
       <small>
         {{#tags}}

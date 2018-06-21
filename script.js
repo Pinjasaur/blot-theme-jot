@@ -13,7 +13,7 @@
       .replace(/\-\-+/g, '-'); // Replace multiple - with single -
   }
 
-  var $headers = $(".entry :header");
+  var $headers = $(".entry :header:not(h1:first-child)");
 
   $headers.each(function(index) {
 
