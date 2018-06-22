@@ -392,14 +392,12 @@ iframe {width: 100%;}
 
 a.header-hash {
   position: absolute;
-  top: .25em;
+  top: .2em;
   left: .25em;
-  font-size: .8em;
-  padding: .2em;
+  padding: 0;
   text-decoration: none;
   background: none;
   color: #9e9e9e;
-  line-height: 1;
 }
 
 a.header-hash:hover {
