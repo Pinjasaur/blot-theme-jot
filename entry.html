@@ -19,8 +19,6 @@
 
     {{{body}}}
 
-    <hr>
-
     {{#date}}
     <p>
       <small>Posted on {{date}}</small>
@@ -40,21 +38,21 @@
 
   <hr class="full">
 
+  <div class="text-center">
+    {{#next}}
+    <small><a href="{{url}}">&larr; Next post</a></small>
+    {{/next}}
+
+    {{#next}}{{#previous}}<small>&nbsp;&ndash;&nbsp;</small>{{/previous}}{{/next}}
+
+    {{#previous}}
+    <small><a href="{{url}}">Previous post &rarr;</a></small>
+    {{/previous}}
+  </div>
+
   {{#adjacent}}
   <br>
   {{/adjacent}}
-
-  <div class="text-center">
-    {{#next}}
-    <small><a href="{{url}}">&laquo; Next post</a></small>
-    {{/next}}
-
-    {{#next}}{{#previous}}<small> &ndash; </small>{{/previous}}{{/next}}
-
-    {{#previous}}
-    <small><a href="{{url}}">Previous post &raquo;</a></small>
-    {{/previous}}
-  </div>
 
   {{/entry}}
 

@@ -4,17 +4,23 @@
 <body>
   {{> header}}
 
-  <h1>{{tag}}</h1>
-
-  <hr class="full">
-
   <small style="margin-top: -.625em;display: block;">
-    All posts tagged {{tag}}:
+    All posts tagged:
   </small>
 
+  <h1 style="margin-top: .2em">{{tag}}</h1>
+
   {{#entries}}
-  <a href="{{url}}" class="row"><b>{{title}}</b> {{#date}}&nbsp;·&nbsp; <span style="white-space: nowrap;">{{date}}</span>{{/date}}</a>
+  <a href="{{url}}" class="row">
+    <b>{{title}}</b> {{#date}}&nbsp;&mdash;&nbsp; <span style="white-space: nowrap;">{{date}}</span>{{/date}}
+    {{#metadata.tldr}}
+    <br>
+    <small>{{{metadata.tldr}}}</small>
+    {{/metadata.tldr}}
+  </a>
   {{/entries}}
+
+  <hr>
 
   {{> footer}}
 

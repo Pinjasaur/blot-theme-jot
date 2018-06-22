@@ -14,7 +14,7 @@
 
   <div class="entries">
     {{#entries}}
-    <a class="archive" href="{{url}}">
+    <a class="archive row" href="{{url}}">
       <b>{{title}}</b>
       {{#metadata.tldr}}
       <br>
@@ -27,6 +27,8 @@
   <br>
   {{/months}}
   {{/archives}}
+
+  <hr>
 
   {{> footer}}
 

@@ -5,7 +5,7 @@
   {{> header}}
 
   <form action='/search'>
-    <input name="q" type="text" placeholder="Enter a search term..." value="{{#query}}{{query}}{{/query}}" autofocus>
+    <input name="q" type="text" placeholder="Enter a search term&hellip;" value="{{#query}}{{query}}{{/query}}" autofocus>
     <input type="submit" value="Search">
   </form>
 
@@ -13,13 +13,27 @@
 
   {{#query}}
   {{^entries}}
-  <p>Sorry, nothing found for “{{query}}”</p>
+  <p>Sorry, nothing found for <u><em>{{query}}</em></u></p>
   {{/entries}}
   {{/query}}
 
   {{#entries}}
-  <a href="{{url}}" class="row"><b>{{title}}</b> {{#date}}&nbsp;&mdash;&nbsp; <span style="white-space: nowrap;">{{date}}</span>{{/date}}</a>
+  <a href="{{url}}" class="row">
+    <b>{{title}}</b> {{#date}}&nbsp;&mdash;&nbsp; <span style="white-space: nowrap;">{{date}}</span>{{/date}}
+    {{#metadata.tldr}}
+    <br>
+    <small>{{{metadata.tldr}}}</small>
+    {{/metadata.tldr}}
+  </a>
   {{/entries}}
+
+  {{^entries.length}}
+  <br><br><br>
+  {{/entries.length}}
+
+  {{#entries.length}}
+  <hr>
+  {{/entries.length}}
 
   {{> footer}}
 
