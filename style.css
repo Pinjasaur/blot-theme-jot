@@ -13,7 +13,7 @@ body {
 /* Text */
 
 a {color: inherit;text-decoration: none;padding: 0.25em 0.5em;background: none;margin: -0.25em -0.5em;border-radius: 4px;transition: background 0.2s ease;}
-a:hover {background: rgba(0,0,0,0.02);color: #468CC7;}
+a:hover {background: rgba(0,0,0,0.02);color: #6d14e9;}
 a:active {opacity: 0.9}
 
 h1 {font-size: 2.25em;line-height:1.2;}
@@ -378,7 +378,7 @@ iframe {width: 100%;}
 }
 
 .small-caps {
-  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 .archive {
