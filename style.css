@@ -1,19 +1,34 @@
 /* This template tag is replaced by CSS when this file is rendered */
 {{{appCSS}}}
 
+html {
+  --accent: #6d14e9;
+  --bg: #fff;
+  --fg: #333;
+  --hover-bg: rgba(0,0,0,0.02);
+}
+
+html[data-theme="dark"] {
+  --accent: yellow;
+  --bg: #333;
+  --fg: #fff;
+  --hover-bg: rgba(255, 255, 255, .02);
+}
+
 body {
   font: 1.125rem / 1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   word-wrap: break-word;
   max-width: 32em;
   margin: 0 auto;
   padding: 2.5em 1.25em;
-  color: #333;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 /* Text */
 
 a {color: inherit;text-decoration: none;padding: 0.25em 0.5em;background: none;margin: -0.25em -0.5em;border-radius: 4px;transition: background 0.2s ease;}
-a:hover {background: rgba(0,0,0,0.02);color: #6d14e9;}
+a:hover {background: var(--hover-bg);color: var(--accent);}
 a:active {opacity: 0.9}
 
 h1 {font-size: 2.25em;line-height:1.2;}
@@ -66,7 +81,7 @@ a.row {
   margin-left: -16em;
 }*/
 
-.archive {color: black;line-height: 1.75;margin-bottom: 0}
+.archive {color: var(--fg);line-height: 1.75;margin-bottom: 0}
 
 input[name=q] {
   display: inline-block;
@@ -74,10 +89,10 @@ input[name=q] {
   box-sizing: border-box;
   width: 70%;
   padding: 0.444em 0.666em;
-  color: #555;
-  background-color: #fff;
+  color: var(--fg);
+  background-color: var(--bg);
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid var(--fg);
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -85,6 +100,10 @@ input[name=q] {
   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   font-family: inherit;
+}
+
+form[action="/search"] {
+  text-align: center;
 }
 
 input[type=submit] {
@@ -97,9 +116,11 @@ input[type=submit] {
   border: 1px solid transparent;
   border-radius: 4px;
   padding-left: 2em;
-  border: 1px solid #ccc;
+  border: 1px solid var(--fg);
+  color: var(--fg);
+  background: none;
   background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iaWNvbi1zZWFyY2giIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGlkPSJzZWFyY2giIGQ9Ik03Ljk5LDYuOTI4TDUuODQ3LDQuNzg0YzAuMjg5LTAuNDc2LDAuNDU4LTEuMDMzLDAuNDU4LTEuNjNDNi4zMDUsMS40MTIsNC44OTUsMCwzLjE1MiwwDQoJQzEuNDExLDAsMCwxLjQxMiwwLDMuMTU0YzAsMS43NDEsMS40MTIsMy4xNTEsMy4xNTMsMy4xNTFjMC41OTcsMCwxLjE1NC0wLjE2OSwxLjYzLTAuNDU4bDIuMTQ1LDIuMTQ2TDcuOTksNi45Mjh6IE0xLjIwMywzLjE1NA0KCWMwLjAwMi0xLjA3NywwLjg3NC0xLjk0OSwxLjk1MS0xLjk1MWMxLjA3NiwwLjAwMiwxLjk0OCwwLjg3NCwxLjk0OSwxLjk1MUM1LjEwMSw0LjIzLDQuMjI5LDUuMTAzLDMuMTUzLDUuMTAzDQoJQzIuMDc1LDUuMTAzLDEuMjA1LDQuMjMsMS4yMDMsMy4xNTR6Ii8+DQo8L3N2Zz4=) 0.8em center/0.8em no-repeat;
-
+  filter: brightness(0) invert(1);
 }
 
 input#search:focus {
@@ -307,17 +328,39 @@ iframe {width: 100%;}
 .column h2,
 .column h3 {margin-bottom: -12px}
 
-/* The theme used by the syntax highlighting app */
-.hljs {display: block;overflow-x: auto;}
-.hljs-comment, .hljs-quote, .hljs-variable {color: #008000;}
-.hljs-keyword, .hljs-selector-tag, .hljs-built_in, .hljs-name, .hljs-tag {color: #00f;}
-.hljs-string, .hljs-title, .hljs-section, .hljs-attribute, .hljs-literal, .hljs-template-tag, .hljs-template-variable, .hljs-type, .hljs-addition {color: #a31515;}
-.hljs-deletion, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-meta {color: #2b91af;}
-.hljs-doctag {color: #808080;}
-.hljs-attr {color: #f00;}
-.hljs-symbol, .hljs-bullet, .hljs-link {color: #00b0e8;}
-.hljs-emphasis {font-style: italic;}
-.hljs-strong {font-weight: bold;}
+/*
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+*/
+html[data-theme="dark"] .hljs { display: block; overflow-x: auto; color: #abb2bf; background: #282c34; }
+html[data-theme="dark"] .hljs-comment, html[data-theme="dark"] .hljs-quote { color: #5c6370; font-style: italic; }
+html[data-theme="dark"] .hljs-doctag, html[data-theme="dark"] .hljs-keyword, html[data-theme="dark"] .hljs-formula { color: #c678dd; }
+html[data-theme="dark"] .hljs-section, html[data-theme="dark"] .hljs-name, html[data-theme="dark"] .hljs-selector-tag, html[data-theme="dark"] .hljs-deletion, html[data-theme="dark"] .hljs-subst { color: #e06c75; }
+html[data-theme="dark"] .hljs-literal { color: #56b6c2; }
+html[data-theme="dark"] .hljs-string, html[data-theme="dark"] .hljs-regexp, html[data-theme="dark"] .hljs-addition, html[data-theme="dark"] .hljs-attribute, html[data-theme="dark"] .hljs-meta-string { color: #98c379; }
+html[data-theme="dark"] .hljs-built_in, html[data-theme="dark"] .hljs-class .hljs-title { color: #e6c07b; }
+html[data-theme="dark"] .hljs-attr, html[data-theme="dark"] .hljs-variable, html[data-theme="dark"] .hljs-template-variable, html[data-theme="dark"] .hljs-type, html[data-theme="dark"] .hljs-selector-class, html[data-theme="dark"] .hljs-selector-attr, html[data-theme="dark"] .hljs-selector-pseudo, html[data-theme="dark"] .hljs-number { color: #d19a66; }
+html[data-theme="dark"] .hljs-symbol, html[data-theme="dark"] .hljs-bullet, html[data-theme="dark"] .hljs-link, html[data-theme="dark"] .hljs-meta, html[data-theme="dark"] .hljs-selector-id, html[data-theme="dark"] .hljs-title { color: #61aeee; }
+html[data-theme="dark"] .hljs-emphasis { font-style: italic; }
+html[data-theme="dark"] .hljs-strong { font-weight: bold; }
+html[data-theme="dark"] .hljs-link { text-decoration: underline; }
+
+/*
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+*/
+.hljs { display: block; overflow-x: auto; color: #383a42; background: #fafafa; }
+.hljs-comment, .hljs-quote { color: #a0a1a7; font-style: italic; }
+.hljs-doctag, .hljs-keyword, .hljs-formula { color: #a626a4; }
+.hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst { color: #e45649; }
+.hljs-literal { color: #0184bb; }
+.hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string { color: #50a14f; }
+.hljs-built_in, .hljs-class .hljs-title { color: #c18401; }
+.hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number { color: #986801; }
+.hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title { color: #4078f2; }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: bold; }
+.hljs-link { text-decoration: underline; }
 
 
 @media screen and (max-width: 952px) {
@@ -335,7 +378,7 @@ iframe {width: 100%;}
 
 @media screen and (max-width: 34em) {
 
-  hr.full, a.row {width: 100%;margin-left: 0;margin-right:0;padding-right: 0;padding-left:0;position: relative;left: 0;}
+  hr.full, a.row {margin-left: 0;margin-right:0;}
 
 }
 
@@ -347,10 +390,28 @@ iframe {width: 100%;}
   a.search {margin-left: 0}
   body {font-size: 1rem;padding: 1rem}
 
+  .header .title {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 0;
+  }
+
+  #logo img {
+    max-width: 5em;
+    margin-right: 1em;
+  }
+
+  #logo {
+    margin-bottom: 1em;
+  }
+
 }
 
 @media screen and (max-width: 400px) {
   body {font-size: 0.9rem;padding: 0.5rem;margin: 0}
+  #logo img {
+    max-width: 3em;
+  }
 }
 
 /**
@@ -402,13 +463,17 @@ a.header-hash {
 
 a.header-hash:hover {
   background: none;
-  color: #333;
+  color: var(--accent);
 }
 
 .archive + .entries {
   margin-top: .5em;
-  padding-left: .5em;
   border-left: 2px solid #9e9e9e;
+}
+
+.archive + .entries > .archive {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .entry-title {
@@ -433,4 +498,8 @@ blockquote {
   margin: 1em 0;
   padding-left: 2em;
   border-left: 3px solid #777;
+}
+
+.zoom-overlay {
+  background-color: var(--bg);
 }

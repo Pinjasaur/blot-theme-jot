@@ -4,6 +4,13 @@
   <meta name="description" content="{{> description}}">
   <title>{{> title}}</title>
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{title}}" href="{{{feed_url}}}">
+  <script>
+  (function (html) {
+    if (localStorage.getItem('theme')) {
+      html.setAttribute('data-theme', localStorage.getItem('theme'))
+    }
+  })(document.documentElement)
+  </script>
   <link rel="stylesheet" href="{{{css_url}}}">
   {{#avatar}}
   <link rel="icon" href="{{{avatar_url}}}" type="image/x-icon">

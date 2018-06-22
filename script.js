@@ -34,4 +34,28 @@
 
   });
 
+  var $theme = $('.js-theme');
+
+  // Initial CTA values
+  if (localStorage.getItem('theme')) {
+    $theme.text('Light Theme')
+  } else {
+    $theme.text('Dark Theme')
+  }
+
+  // Handle changes
+  $theme.on('click', function (event) {
+    event.preventDefault()
+
+    if (localStorage.getItem('theme')) {
+      localStorage.removeItem('theme')
+      $('html').removeAttr('data-theme')
+      $theme.text('Dark Theme')
+    } else {
+      localStorage.setItem('theme', 'dark')
+      $('html').attr('data-theme', 'dark')
+      $theme.text('Light Theme')
+    }
+  })
+
 }());
