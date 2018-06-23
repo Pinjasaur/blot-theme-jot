@@ -9,7 +9,7 @@ html {
 }
 
 html[data-theme="dark"] {
-  --accent: yellow;
+  --accent: #fff91a;
   --bg: #333;
   --fg: #fff;
   --hover-bg: rgba(255, 255, 255, .02);
