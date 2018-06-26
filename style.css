@@ -1,20 +1,6 @@
 /* This template tag is replaced by CSS when this file is rendered */
 {{{appCSS}}}
 
-html {
-  --accent: #6d14e9;
-  --bg: #fff;
-  --fg: #333;
-  --hover-bg: rgba(0,0,0,0.02);
-}
-
-html[data-theme="dark"] {
-  --accent: #fff91a;
-  --bg: #333;
-  --fg: #fff;
-  --hover-bg: rgba(255, 255, 255, .02);
-}
-
 body {
   font: 1.125rem / 1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   word-wrap: break-word;
@@ -60,26 +46,11 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 
 a.menu {margin-right: 0em;line-height: 1.75}
 
-
 a.row {
   display: block;
-  /* position: relative; */
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-  /* padding-right: 16em;
-  width: 50vw;
-  left: 50%;
-  margin-left: -16.5em; */
 }
-
-/* This allows the horizontal rules and full-width links on the index page to fill the entire screen without triggering a scrollbar */
-/*hr.full {
-  width: 50vw;
-  padding-left: 16em;
-  position: relative;
-  left: 50%;
-  margin-left: -16em;
-}*/
 
 .archive {color: var(--fg);line-height: 1.75;margin-bottom: 0}
 
@@ -364,6 +335,20 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 Jot
 */
 
+html {
+  --accent: #6d14e9;
+  --bg: #fff;
+  --fg: #333;
+  --hover-bg: rgba(0,0,0,0.02);
+}
+
+html[data-theme="dark"] {
+  --accent: #fff91a;
+  --bg: #333;
+  --fg: #fff;
+  --hover-bg: rgba(255, 255, 255, .02);
+}
+
 ::selection {
   background-color: var(--accent);
   color: var(--bg);
@@ -478,7 +463,6 @@ blockquote {
   margin-left: .5em;
 }
 
-
 @media screen and (max-width: 952px) {
 
   .entry .margin {position: relative;top: auto;left: auto;right: auto;bottom: auto;}
@@ -494,7 +478,7 @@ blockquote {
 
 @media screen and (max-width: 34em) {
 
-  hr.full, a.row {margin-left: 0;margin-right:0;}
+  a.row {margin-left: 0;margin-right:0;}
 }
 
 @media screen and (max-width: 730px) {
