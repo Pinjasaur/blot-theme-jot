@@ -376,10 +376,6 @@ Jot
   text-shadow: none;
 }
 
-:focus {
-  outline: 1px solid var(--accent);
-}
-
 .footer {
   text-align: center;
 }
