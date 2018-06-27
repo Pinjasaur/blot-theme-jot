@@ -361,6 +361,10 @@ html[data-theme="dark"] {
   text-shadow: none;
 }
 
+:focus {
+  outline-color: var(--accent);
+}
+
 .footer {
   text-align: center;
 }
