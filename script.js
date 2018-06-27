@@ -1,10 +1,10 @@
 /* This template tag is replaced by JS when this file is rendered */
 {{{appJS}}}
 
-// Thanks CodePen:
-// https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
 (function() {
 
+  // Thanks CodePen:
+  // https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
   function slugify (text) {
     return text.toString().toLowerCase().trim()
       .replace(/\s+/g, '-') // Replace spaces with -
@@ -34,6 +34,11 @@
 
   });
 
+  // Add class for active menu links
+  $('.header a.menu')
+    .filter((i, el) => $(el).attr('href') === location.pathname)
+    .addClass('is-active')
+
   var $theme = $('.js-theme')
   var $html = $('html')
 
@@ -44,7 +49,7 @@
     $theme.text('Dark Theme')
   }
 
-  // Handle changes
+  // Handle theme change
   $theme.on('click', function (event) {
 
     event.preventDefault()
