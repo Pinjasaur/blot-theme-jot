@@ -60,4 +60,10 @@
     }
   })
 
+  // For the luls
+  console.log(
+    '%cpaul.af',
+    'display: inline-block; padding: .5rem; background-color: #000; color: #fff; border-radius: .25rem; font-family: monospace;'
+  )
+
 }());
