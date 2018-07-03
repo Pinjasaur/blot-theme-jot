@@ -39,6 +39,7 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 
 #logo {font-weight: bold;display: inline-block;line-height: 1.75}
 #logo img {max-width: 8em;max-height:8em;margin-bottom: 0.25em}
+html[data-theme="dark"] #logo img { filter: invert(1); }
 #logo img.rounded {border-radius: 50%;}
 
 #logo:hover {opacity: 0.8;background: none;color: inherit;}
