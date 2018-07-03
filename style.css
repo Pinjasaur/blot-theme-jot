@@ -389,6 +389,10 @@ html[data-theme="dark"] {
   text-transform: lowercase;
 }
 
+del {
+  opacity: .7;
+}
+
 .archive {
   display: block;
 }
