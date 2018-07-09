@@ -176,7 +176,7 @@ ul, ol {
   margin-bottom: 1.25em;
 }
 
-ul {list-style: circle;}
+ul {list-style: square;}
 
 ul ul, ol ul, ol ol, ul ol {margin-left: 1.25em;margin-bottom: 0}
 
@@ -506,7 +506,7 @@ blockquote {
 
 @media screen and (max-width: 730px) {
 
-  ul, li {margin-left: 24px}
+  li {margin-left: 24px}
   ul ul, ol ul, ol ol, ul ol {margin-left: 0}
   .nav .right {clear: both;float: none;margin-top: 3px}
   a.search {margin-left: 0}
