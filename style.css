@@ -386,9 +386,11 @@ html[data-theme="dark"] {
   text-transform: uppercase;
 }
 
+/*
 .small-caps {
   text-transform: lowercase;
 }
+*/
 
 del {
   opacity: .7;
