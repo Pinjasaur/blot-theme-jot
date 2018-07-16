@@ -332,6 +332,29 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 .hljs-strong { font-weight: bold; }
 .hljs-link { text-decoration: underline; }
 
+/*! cuetip v1.1.0 | MIT License | https://pinjasaur.github.io/cuetip/ */
+[data-tooltip]{position:relative;cursor:inherit}[data-tooltip]:not(.tooltip--no-tail)::before{display:none;pointer-events:none;position:absolute;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%;content:"";bottom:calc(100% - .25em + .2em);border-width:.25em;border-style:solid;border-color:#333 transparent transparent transparent}[data-tooltip].tooltip--top:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;bottom:calc(100% - .25em + .2em);border-color:#333 transparent transparent transparent;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--right:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;left:calc(100% - .25em + .2em);border-color:transparent #333 transparent transparent;-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip].tooltip--bottom:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;top:calc(100% - .25em + .2em);border-color:transparent transparent #333 transparent;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--left:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;right:calc(100% - .25em + .2em);border-color:transparent transparent transparent #333;-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip]::after{display:none;pointer-events:none;position:absolute;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%;content:attr(data-tooltip);white-space:nowrap;background:#333;color:#fff;padding:.25em;border-radius:.1em;bottom:calc(100% + .25em + .2em)}[data-tooltip].tooltip--top::after{top:auto;right:auto;bottom:auto;left:auto;bottom:calc(100% + .25em + .2em);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--right::after{top:auto;right:auto;bottom:auto;left:auto;left:calc(100% + .25em + .2em);-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip].tooltip--bottom::after{top:auto;right:auto;bottom:auto;left:auto;top:calc(100% + .25em + .2em);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--left::after{top:auto;right:auto;bottom:auto;left:auto;right:calc(100% + .25em + .2em);-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip]:hover::before{display:inline-block}[data-tooltip]:hover::after{display:inline-block}
+
+[data-tooltip] {
+  border-bottom: 1px dotted var(--fg);
+}
+
+[data-tooltip]::after {
+  font-size: .8em;
+  padding: .15em .3em;
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+[data-tooltip]:not(.tooltip--no-tail)::before {
+  border-color: var(--accent) transparent transparent;
+}
+
+abbr[data-tooltip] {
+  text-decoration: none;
+  cursor: help;
+}
+
 /*
 Jot
 */
