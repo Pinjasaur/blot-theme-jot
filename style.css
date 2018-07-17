@@ -341,12 +341,15 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 
 [data-tooltip]::after {
   font-size: .8em;
+  opacity: .9;
   padding: .15em .3em;
   background-color: var(--accent);
   color: var(--bg);
 }
 
 [data-tooltip]:not(.tooltip--no-tail)::before {
+  font-size: .8em;
+  opacity: .9;
   border-color: var(--accent) transparent transparent;
 }
 
