@@ -514,6 +514,30 @@ blockquote {
   margin-left: .5em;
 }
 
+.footnotes li:not(:target) {
+  opacity: .5;
+}
+
+.heart {
+  color: red;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%,20%,50%,80%,to {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(1.1);
+  }
+}
+
 @media screen and (max-width: 952px) {
 
   .entry .margin {position: relative;top: auto;left: auto;right: auto;bottom: auto;}
