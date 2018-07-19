@@ -134,10 +134,10 @@ code {
   margin: 0;
 }
 
-p code {
+p code,
+li code {
   line-height: 1em;
   padding: 2px;
-  margin-left: -2px;
   display: inline-block;
 }
 
@@ -514,7 +514,7 @@ blockquote {
   margin-left: .5em;
 }
 
-.footnotes li:not(:target) {
+.footnotes li:not(:target):not(:hover) {
   opacity: .5;
 }
 
