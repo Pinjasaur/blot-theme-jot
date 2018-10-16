@@ -6,6 +6,7 @@ theme.
 ## Features
 
 - Light and dark theme(!!)
+- Navigational keyboard shortcuts (h, j, k, and l)
 - Hash `id`s for each header
 - `is-active` class for active menu links
 - Normalized styling across browsers (removes horizontal scrollbar)

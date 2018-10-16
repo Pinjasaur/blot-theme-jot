@@ -40,13 +40,13 @@
 
   <div class="text-center">
     {{#next}}
-    <small><a href="{{url}}">&larr; Next post</a></small>
+    <small><a href="{{url}}" class="js-newer">&larr; Newer post</a></small>
     {{/next}}
 
     {{#next}}{{#previous}}<small>&nbsp;&bullet;&nbsp;</small>{{/previous}}{{/next}}
 
     {{#previous}}
-    <small><a href="{{url}}">Previous post &rarr;</a></small>
+    <small><a href="{{url}}" class="js-older">Older post &rarr;</a></small>
     {{/previous}}
   </div>
 
