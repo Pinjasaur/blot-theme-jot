@@ -147,6 +147,7 @@ pre code {
   margin: 0 -1rem;
   background-color: rgba(0,0,0,.02);
   border-radius: 0;
+  overflow-x: auto;
 }
 
 /* TABLES */
