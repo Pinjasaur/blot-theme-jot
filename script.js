@@ -1,6 +1,14 @@
 /* This template tag is replaced by JS when this file is rendered */
 {{{appJS}}}
 
+/*!
+ *
+ * J O T
+ *
+ * Custom scripts below:
+ *
+ */
+
 (function() {
 
   // Thanks CodePen:
@@ -93,7 +101,7 @@
   })
 
   // Handle shortcut key presses
-  window.addEventListener('keydown', function (event) {
+  $(window).on('keydown', function (event) {
     // Bail if not a shortcut
     if (!isShortcut(event.which))
       return

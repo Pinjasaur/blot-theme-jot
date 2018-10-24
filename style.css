@@ -359,9 +359,13 @@ abbr[data-tooltip] {
   cursor: help;
 }
 
-/*
-Jot
-*/
+/*!
+ *
+ * J O T
+ *
+ * Custom styles below:
+ *
+ */
 
 html {
   --accent: #6d14e9;
