@@ -110,7 +110,7 @@ a.footnote-ref {
 }
 
 a.footnote-ref:hover {
-  background-color: none;
+  background-color: transparent;
 }
 
 a.footnote-ref sup {
@@ -120,7 +120,7 @@ a.footnote-ref sup {
 
 a.footnote-back {
   text-decoration: none;
-  background-color: none;
+  background-color: transparent;
 }
 
 /* CODE */
@@ -442,7 +442,6 @@ a.header-hash {
   left: .25em;
   padding: 0;
   text-decoration: none;
-  background-color: none;
   color: #9e9e9e;
 }
 
