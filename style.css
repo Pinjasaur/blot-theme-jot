@@ -33,7 +33,7 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 .entry a {text-decoration: underline;}
 
 .caption {font-size: smaller;}
-.caption {max-width: 36rem;display: block;margin: .625em auto 1.25em auto;}
+.caption {/*max-width: 36rem;*/display: block;margin: .625em auto 1.25em auto;}
 
 /* Theme specific styles */
 
