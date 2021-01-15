@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{{> head}}
+<body>
+  {{> header}}
+
+  <small style="margin-top: -.625em;display: block;">
+    All the tags.
+  </small>
+
+  <p>
+    You may also be interested in browsing the <a href="/archives">archives</a>.
+  </p>
+
+  {{#all_tags.length}}
+  <ul>
+    {{#all_tags}}
+    <li>
+      <a href="/tagged/{{slug}}">{{name}}</a>
+    </li>
+    {{/all_tags}}
+  </ul>
+  {{/all_tags.length}}
+
+  <hr>
+
+  {{> footer}}
+
+</body>
+</html>
