@@ -21,6 +21,14 @@ theme.
 
 ![Post Dark](.github/post-dark.png)
 
+## Usage: Development & Deployment
+
+Changes I make directly to this codebase modify a "staging" template I have
+enabled in Blot. To "deploy", I use the [`deploy.sh`](/deploy.sh) script to move
+files into an adjacent directory that is the "live" template within Blot. This
+allows me to use template preview URLs to view any changes before they impact
+live visitors, in an ideal world.
+
 ## License
 
 [Blot][blot], including the base Index theme, is licensed by
