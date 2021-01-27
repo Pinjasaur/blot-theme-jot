@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 #DEPLOY_DIR="${DEPLOY_DIR:-../live}"
 DEPLOY_DIR="${DEPLOY_DIR:-../jot-2}"
 
@@ -14,6 +16,7 @@ die() {
 
 # use ./ to avoid names with dashes causing issues
 # https://github.com/koalaman/shellcheck/wiki/SC2035
-cp ./*.{html,rss,json,txt,js,xml,css} "${DEPLOY_DIR}"
+cp ./*.{html,rss,txt,js,xml,css} "${DEPLOY_DIR}" && \
+jq '.name += " (Live)"' < package.json > "${DEPLOY_DIR}"/package.json
 
 echo "🎉 Deployment successful."
