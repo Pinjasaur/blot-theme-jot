@@ -7,9 +7,17 @@
 
   <h1>Archives</h1>
 
+  <small style="margin-top: -.625em; display: block;">
+    <code>tar xzf</code>-ing all the things.
+  </small>
+
+  <p>
+    You may also be interested in browsing the <a style="text-decoration: underline" href="/tags">tags</a>.
+  </p>
+
   {{#archives}}
   {{#months}}
-  <hr>
+
   <h3 class="archive">{{month}} {{year}}&nbsp;&nbsp;<small>{{entries.length}} post{{s}}</small></h3>
 
   <div class="entries">
@@ -25,10 +33,9 @@
   </div>
 
   <br>
+  <hr>
   {{/months}}
   {{/archives}}
-
-  <hr>
 
   {{> footer}}
 

@@ -7,19 +7,25 @@
 
   <small style="margin-top: -.625em;display: block;">
     {{#pagination.previous}}Page {{pagination.current}} of {{pagination.total}}{{/pagination.previous}}
-    {{^pagination.previous}}Latest posts:{{/pagination.previous}}
+    {{^pagination.previous}}Latest and <em>greatest</em> posts:{{/pagination.previous}}
   </small>
 
   <br>
 
   {{#entries}}
   <a href="{{url}}" class="row">
-    <b>{{title}}</b>&nbsp;{{#date}}&nbsp;&mdash;&nbsp;<span style="white-space: nowrap;">{{date}}</span>{{/date}}
+    <b>{{title}}</b>
+    {{#date}}
+    &lt;&nbsp;<small style="white-space: nowrap;">{{date}}</small>&nbsp;/&gt;
+    {{/date}}
     {{#metadata.tldr}}
     <br>
-    <small>{{{metadata.tldr}}}</small>
+    <small><span style="color: var(--fg)">tl;dr:</span> {{{metadata.tldr}}}</small>
     {{/metadata.tldr}}
   </a>
+  {{^last}}
+  <hr class="skinny">
+  {{/last}}
   {{/entries}}
 
   <br><br>
