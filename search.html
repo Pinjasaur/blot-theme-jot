@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
-{{> head}}
+{{> _head}}
 <body>
 
-  {{> header}}
+  {{> _header}}
 
   <form action="/search" class="search-form">
     <input class="search__input" name="q" type="search" placeholder="Enter a search term&hellip;" value="{{#query}}{{query}}{{/query}}" autofocus>
@@ -36,7 +36,7 @@
   <hr>
   {{/entries.length}}
 
-  {{> footer}}
+  {{> _footer}}
 
 </body>
 </html>

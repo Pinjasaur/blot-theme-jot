@@ -1,4 +1,6 @@
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!--
                        _         __
@@ -13,11 +15,15 @@
 
   -->
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{> description}}">
   <title>{{> title}}</title>
+  <meta name="description" content="{{> description}}">
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{title}}" href="{{{feed_url}}}">
+  {{#entry.absoluteURL}}
+  <link rel="canonical" href="{{{entry.absoluteURL}}}">
+  {{/entry.absoluteURL}}
+  {{^entry.absoluteURL}}{{#partials.canonical}}
+  <link rel="canonical" href="{{> canonical}}">
+  {{/partials.canonical}}{{/entry.absoluteURL}}
   <script>
   (function (html) {
     if (localStorage.getItem('theme')) {
