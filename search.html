@@ -19,13 +19,7 @@
   {{/query}}
 
   {{#entries}}
-  <a href="{{url}}" class="row">
-    <b>{{title}}</b> {{#date}}&nbsp;&mdash;&nbsp; <span style="white-space: nowrap;">{{date}}</span>{{/date}}
-    {{#metadata.tldr}}
-    <br>
-    <small>{{{metadata.tldr}}}</small>
-    {{/metadata.tldr}}
-  </a>
+  {{> __entry}}
   {{/entries}}
 
   {{^entries.length}}

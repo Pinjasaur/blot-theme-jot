@@ -1,0 +1,11 @@
+{{! Note the double underscore prefix: my convention for a partial partial }}
+<a href="{{url}}" class="{{#archives}}archive {{/archives}}row">
+  <b>{{title}}</b>
+  {{#date}}
+  &lt;&nbsp;<small style="white-space: nowrap;">{{date}}</small>&nbsp;/&gt;
+  {{/date}}
+  {{#metadata.tldr}}
+  <br>
+  <small><span style="color: var(--fg)">tl;dr:</span> {{{metadata.tldr}}}</small>
+  {{/metadata.tldr}}
+</a>
