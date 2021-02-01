@@ -1,5 +1,5 @@
 {{! Note the double underscore prefix: my convention for a partial partial }}
-<a href="{{url}}" class="{{#archives}}archive {{/archives}}row">
+<a href="{{url}}" class="{{#archives.length}}archive {{/archives.length}}row">
   <b>{{title}}</b>
   {{#date}}
   &lt;&nbsp;<small style="white-space: nowrap;">{{date}}</small>&nbsp;/&gt;
