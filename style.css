@@ -562,7 +562,7 @@ a.header-hash:hover {
 blockquote {
   margin: 1em 0;
   padding-left: 2em;
-  border-left: 3px solid #777;
+  border-left: 3px solid var(--accent);
 }
 
 .zoom-overlay {
@@ -587,6 +587,11 @@ blockquote {
 
 .footnotes li:not(:target):not(:hover) {
   opacity: .5;
+}
+
+[role="doc-noteref"]:target,
+[role="doc-endnote"]:target {
+  outline: 1px dashed var(--accent);
 }
 
 .heart {
