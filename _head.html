@@ -17,6 +17,9 @@
 
   <title>{{> title}}</title>
   <meta name="description" content="{{> description}}">
+  {{#entry.thumbnail}}
+  <meta property="og:image" content="{{{entry.thumbnail.large.url}}}">
+  {{/entry.thumbnail}}
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{title}}" href="{{{feed_url}}}">
   {{#entry.absoluteURL}}
   <link rel="canonical" href="{{{entry.absoluteURL}}}">
