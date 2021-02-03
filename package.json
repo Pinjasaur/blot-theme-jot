@@ -38,12 +38,6 @@
         "description": "Error on {{{title}}}"
       }
     },
-    "public.html": {
-      "partials": {
-        "title": "Index of {{{path}}}",
-        "description": "All the files and folders inside {{{path}}}"
-      }
-    },
     "tags.html": {
       "url": "/tags",
       "partials": {
