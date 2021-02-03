@@ -14,15 +14,15 @@
 
     {{#date}}
     <p class="entry-date">
-      <small>{{date}}</small>
+      <small>Published {{date}}</small>
     </p>
     {{/date}}
 
     {{{body}}}
 
-    {{#date}}
+    {{#entry.updated}}
     <p>
-      <small>Posted on {{date}}</small>
+      <small>Last modified {{#formatUpdated}}MMMM D, YYYY{{/formatUpdated}}</small>
       {{#tags.length}}
       <small>
         {{#tags}}
@@ -31,7 +31,7 @@
       </small>
       {{/tags.length}}
     </p>
-    {{/date}}
+    {{/entry.updated}}
 
     {{> pluginHTML}}
 
