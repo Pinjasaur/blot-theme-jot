@@ -16,7 +16,8 @@ die() {
 
 # use ./ to avoid names with dashes causing issues
 # https://github.com/koalaman/shellcheck/wiki/SC2035
-cp ./*.{html,rss,txt,js,xml,css} "${DEPLOY_DIR}" && \
+rm "${DEPLOY_DIR}"/*.{html,rss,txt,js,xml,css} &&
+cp ./*.{html,rss,txt,js,xml,css} "${DEPLOY_DIR}" &&
 jq '.name += " (Live)"' < package.json > "${DEPLOY_DIR}"/package.json
 
 echo "🎉 Deployment successful."
