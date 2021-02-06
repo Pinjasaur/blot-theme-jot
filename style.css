@@ -477,6 +477,10 @@ del {
   opacity: .7;
 }
 
+abbr[title] {
+  cursor: help;
+}
+
 /* `zoom-in` is mostly supported, but fallback to `pointer` just in case */
 img[data-action="zoom"] {
   cursor: pointer;
