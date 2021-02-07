@@ -5,7 +5,7 @@ set -e
 #DEPLOY_DIR="${DEPLOY_DIR:-../live}"
 DEPLOY_DIR="${DEPLOY_DIR:-../jot-2}"
 
-echo "👋 Prepping to deploy to '${DEPLOY_DIR}'. 🤞"
+echo "🤞 Prepping to deploy to '${DEPLOY_DIR}'."
 
 die() {
   echo "🚨 [FATAL] $*" 1>&2
@@ -20,4 +20,4 @@ rm "${DEPLOY_DIR}"/*.{html,rss,txt,js,xml,css} &&
 cp ./*.{html,rss,txt,js,xml,css} "${DEPLOY_DIR}" &&
 jq '.name += " (Live)"' < package.json > "${DEPLOY_DIR}"/package.json
 
-echo "🎉 Deployment successful! 🚀"
+echo "🚀 Deployment successful!"
