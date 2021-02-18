@@ -29,13 +29,19 @@ theme.
 
 ![Post Dark](/screenshots/post-dark.png)
 
-## Usage: Development & Deployment
+## [Scripts](/scripts)
 
-Changes I make directly to this codebase modify a "staging" template I have
-enabled in Blot. To "deploy", I use the [`deploy.sh`](/scripts/deploy.sh) script to move
-files into an adjacent directory that is the "live" template within Blot. This
-allows me to use template preview URLs to view any changes before they impact
-live visitors, in an ideal world.
+- [`deploy.sh`](/scripts/deploy.sh)
+
+    Changes I make directly to this codebase modify a "staging" template I have
+    enabled in Blot. To "deploy", I use the [`deploy.sh`](/scripts/deploy.sh)
+    script to move files into an adjacent directory that is the "live" template
+    within Blot. This allows me to use template preview URLs to view any changes
+    before they impact live visitors, in an ideal world.
+
+- [`screenshots.sh`](/scripts/screenshots.sh)
+
+    Generate the screenshots featured in this README.
 
 ## License
 
