@@ -12,6 +12,10 @@
       {{title}}
     </h1>
 
+    {{#metadata.feat}}{{#entry.thumbnail}}
+    <img class="entry-featured" src="{{{entry.thumbnail.large.url}}}" alt="Featured image for {{title}}">
+    {{/entry.thumbnail}}{{/metadata.feat}}
+
     {{#date}}
     <p class="entry-date">
       <small>Published {{date}}</small>

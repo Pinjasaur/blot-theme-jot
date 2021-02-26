@@ -249,6 +249,7 @@ iframe {width: 100%;}
 .column img {margin-top: 6px}
 
 .margin p, .inside p {font-style: italic;margin-top: 0}
+.inside p, .inside .caption { margin-bottom: 0; }
 
 .left.margin {
   left: -29.3333%;
@@ -543,6 +544,12 @@ a.header-hash:hover {
   display: inline-block;
   padding-bottom: .5em;
   border-bottom: 1px solid #eee;
+}
+
+.entry-featured {
+  margin-left: -1rem;
+  max-width: unset;
+  width: calc(100% + 2rem);
 }
 
 .header .title {
