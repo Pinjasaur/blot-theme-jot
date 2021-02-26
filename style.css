@@ -21,7 +21,7 @@ h1 {font-size: 2.25em;line-height:1.2;}
 h2 {font-size: 1.25em;}
 h3, h4, h5, h6 {font-size: 1em}
 
-hr {margin: 1.25em 0;border: 0;border-top: 1px solid #eee;}
+hr {margin: 1.25em 0;border: 0;border-top: 1px solid #888; opacity: 0.7}
 br {width: 100%;clear: both;float: none;}
 
 hr.skinny { margin: 1em 0 }
@@ -41,7 +41,8 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 
 #logo {font-weight: bold;display: inline-block;line-height: 1.75}
 #logo img {max-width: 8em;max-height:8em;margin-bottom: 0.25em}
-html[data-theme="dark"] #logo img { filter: invert(1); }
+html[data-theme="dark"] #logo img,
+html[data-theme="amoled"] #logo img { filter: invert(1); }
 #logo img.rounded {border-radius: 50%;}
 
 #logo:hover {opacity: 0.8;background: none;color: inherit;}
@@ -405,16 +406,23 @@ abbr[data-tooltip] {
 
 html {
   --accent: #6d14e9;
-  --bg: #fff;
-  --fg: #333;
+  --bg: rgb(250, 252, 255);
+  --fg: rgb(21, 23, 28);
   --hover-bg: rgba(0,0,0,0.02);
 }
 
 html[data-theme="dark"] {
   --accent: #fff91a;
-  --bg: #333;
-  --fg: #fff;
+  --bg: rgb(21, 23, 28);
+  --fg: rgb(250, 252, 255);
   --hover-bg: rgba(255, 255, 255, .02);
+}
+
+html[data-theme="amoled"] {
+  --accent: #fff91a;
+  --bg: #000;
+  --fg: #fff;
+  --hover-bg: rgba(255, 255, 255, .05);
 }
 
 ::selection {
