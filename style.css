@@ -406,15 +406,15 @@ abbr[data-tooltip] {
 
 html {
   --accent: #6d14e9;
-  --bg: rgb(250, 252, 255);
-  --fg: rgb(21, 23, 28);
+  --bg: rgb(252, 250, 253);
+  --fg: rgb(16, 18, 22);
   --hover-bg: rgba(0,0,0,0.02);
 }
 
 html[data-theme="dark"] {
   --accent: #fff91a;
-  --bg: rgb(21, 23, 28);
-  --fg: rgb(250, 252, 255);
+  --bg: rgb(16, 18, 22);
+  --fg: rgb(252, 250, 253);
   --hover-bg: rgba(255, 255, 255, .02);
 }
 
@@ -423,6 +423,13 @@ html[data-theme="amoled"] {
   --bg: #000;
   --fg: #fff;
   --hover-bg: rgba(255, 255, 255, .05);
+}
+
+html[data-theme="deloma"] {
+  --accent: #6d14e9;
+  --bg: #fff;
+  --fg: #000;
+  --hover-bg: rgba(255, 255, 255, .02);
 }
 
 ::selection {
