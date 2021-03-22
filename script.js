@@ -65,39 +65,32 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   // Initial CTA values
   if (localStorage.getItem('theme')) {
-    $theme.text('Theme: Dark')
-  } else {
-    $theme.text('Theme: Light')
+    $theme.find('option[value="' + localStorage.getItem('theme') + '"]').prop('selected', 'selected')
   }
 
   if (localStorage.getItem('shortcuts')) {
-    $shortcuts.text('Shortcuts: Enabled')
-  } else {
-    $shortcuts.text('Shortcuts: Disabled')
+    $shortcuts.find('option[value="' + localStorage.getItem('shortcuts') + '"]').prop('selected', 'selected')
   }
 
   // Handle theme change
-  $theme.on('click', function (event) {
+  $theme.on('change', function (event) {
     event.preventDefault()
 
-    if (localStorage.getItem('theme')) {
+    if ($(this).val()) {
+      localStorage.setItem('theme', $(this).val())
+      $html.attr('data-theme', $(this).val())
+    } else {
       localStorage.removeItem('theme')
       $html.removeAttr('data-theme')
-      $theme.text('Theme: Light')
-    } else {
-      localStorage.setItem('theme', 'dark')
-      $html.attr('data-theme', 'dark')
-      $theme.text('Theme: Dark')
     }
   })
 
   // Handle shortcut change
-  $shortcuts.on('click', function (event) {
+  $shortcuts.on('change', function (event) {
     event.preventDefault()
 
-    if (localStorage.getItem('shortcuts')) {
+    if (!$(this).val()) {
       localStorage.removeItem('shortcuts')
-      $shortcuts.text('Shortcuts: Disabled')
     } else {
       if (confirm(
         'Enable shortcuts?\n\n' +
@@ -108,7 +101,6 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
         '? - help'
       )) {
         localStorage.setItem('shortcuts', true)
-        $shortcuts.text('Shortcuts: Enabled')
       }
     }
   })

@@ -41,8 +41,6 @@ sup {font-size: 0.83;line-height: 0;vertical-align: super;}
 
 #logo {font-weight: bold;display: inline-block;line-height: 1.75}
 #logo img {max-width: 8em;max-height:8em;margin-bottom: 0.25em}
-html[data-theme="dark"] #logo img,
-html[data-theme="amoled"] #logo img { filter: invert(1); }
 #logo img.rounded {border-radius: 50%;}
 
 #logo:hover {opacity: 0.8;background: none;color: inherit;}
@@ -337,23 +335,6 @@ p {
 }
 
 /*
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-*/
-html[data-theme="dark"] .hljs { display: block; overflow-x: auto; color: #abb2bf; background: #282c34; }
-html[data-theme="dark"] .hljs-comment, html[data-theme="dark"] .hljs-quote { color: #5c6370; font-style: italic; }
-html[data-theme="dark"] .hljs-doctag, html[data-theme="dark"] .hljs-keyword, html[data-theme="dark"] .hljs-formula { color: #c678dd; }
-html[data-theme="dark"] .hljs-section, html[data-theme="dark"] .hljs-name, html[data-theme="dark"] .hljs-selector-tag, html[data-theme="dark"] .hljs-deletion, html[data-theme="dark"] .hljs-subst { color: #e06c75; }
-html[data-theme="dark"] .hljs-literal { color: #56b6c2; }
-html[data-theme="dark"] .hljs-string, html[data-theme="dark"] .hljs-regexp, html[data-theme="dark"] .hljs-addition, html[data-theme="dark"] .hljs-attribute, html[data-theme="dark"] .hljs-meta-string { color: #98c379; }
-html[data-theme="dark"] .hljs-built_in, html[data-theme="dark"] .hljs-class .hljs-title { color: #e6c07b; }
-html[data-theme="dark"] .hljs-attr, html[data-theme="dark"] .hljs-variable, html[data-theme="dark"] .hljs-template-variable, html[data-theme="dark"] .hljs-type, html[data-theme="dark"] .hljs-selector-class, html[data-theme="dark"] .hljs-selector-attr, html[data-theme="dark"] .hljs-selector-pseudo, html[data-theme="dark"] .hljs-number { color: #d19a66; }
-html[data-theme="dark"] .hljs-symbol, html[data-theme="dark"] .hljs-bullet, html[data-theme="dark"] .hljs-link, html[data-theme="dark"] .hljs-meta, html[data-theme="dark"] .hljs-selector-id, html[data-theme="dark"] .hljs-title { color: #61aeee; }
-html[data-theme="dark"] .hljs-emphasis { font-style: italic; }
-html[data-theme="dark"] .hljs-strong { font-weight: bold; }
-html[data-theme="dark"] .hljs-link { text-decoration: underline; }
-
-/*
 Atom One Light by Daniel Gamage
 Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 */
@@ -369,6 +350,50 @@ Original One Light Syntax theme from https://github.com/atom/one-light-syntax
 .hljs-emphasis { font-style: italic; }
 .hljs-strong { font-weight: bold; }
 .hljs-link { text-decoration: underline; }
+
+/*
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
+*/
+html[data-theme="dark"] .hljs,
+html[data-theme="amoled"] .hljs { display: block; overflow-x: auto; color: #abb2bf; background: #282c34; }
+html[data-theme="dark"] .hljs-comment, html[data-theme="dark"] .hljs-quote,
+html[data-theme="amoled"] .hljs-comment, html[data-theme="amoled"] .hljs-quote { color: #5c6370; font-style: italic; }
+html[data-theme="dark"] .hljs-doctag, html[data-theme="dark"] .hljs-keyword, html[data-theme="dark"] .hljs-formula,
+html[data-theme="amoled"] .hljs-doctag, html[data-theme="amoled"] .hljs-keyword, html[data-theme="amoled"] .hljs-formula { color: #c678dd; }
+html[data-theme="dark"] .hljs-section, html[data-theme="dark"] .hljs-name, html[data-theme="dark"] .hljs-selector-tag, html[data-theme="dark"] .hljs-deletion, html[data-theme="dark"] .hljs-subst,
+html[data-theme="amoled"] .hljs-section, html[data-theme="amoled"] .hljs-name, html[data-theme="amoled"] .hljs-selector-tag, html[data-theme="amoled"] .hljs-deletion, html[data-theme="amoled"] .hljs-subst { color: #e06c75; }
+html[data-theme="dark"] .hljs-literal,
+html[data-theme="amoled"] .hljs-literal { color: #56b6c2; }
+html[data-theme="dark"] .hljs-string, html[data-theme="dark"] .hljs-regexp, html[data-theme="dark"] .hljs-addition, html[data-theme="dark"] .hljs-attribute, html[data-theme="dark"] .hljs-meta-string,
+html[data-theme="amoled"] .hljs-string, html[data-theme="amoled"] .hljs-regexp, html[data-theme="amoled"] .hljs-addition, html[data-theme="amoled"] .hljs-attribute, html[data-theme="amoled"] .hljs-meta-string { color: #98c379; }
+html[data-theme="dark"] .hljs-built_in, html[data-theme="dark"] .hljs-class .hljs-title,
+html[data-theme="amoled"] .hljs-built_in, html[data-theme="amoled"] .hljs-class .hljs-title { color: #e6c07b; }
+html[data-theme="dark"] .hljs-attr, html[data-theme="dark"] .hljs-variable, html[data-theme="dark"] .hljs-template-variable, html[data-theme="dark"] .hljs-type, html[data-theme="dark"] .hljs-selector-class, html[data-theme="dark"] .hljs-selector-attr, html[data-theme="dark"] .hljs-selector-pseudo, html[data-theme="dark"] .hljs-number,
+html[data-theme="amoled"] .hljs-attr, html[data-theme="amoled"] .hljs-variable, html[data-theme="amoled"] .hljs-template-variable, html[data-theme="amoled"] .hljs-type, html[data-theme="amoled"] .hljs-selector-class, html[data-theme="amoled"] .hljs-selector-attr, html[data-theme="amoled"] .hljs-selector-pseudo, html[data-theme="amoled"] .hljs-number { color: #d19a66; }
+html[data-theme="dark"] .hljs-symbol, html[data-theme="dark"] .hljs-bullet, html[data-theme="dark"] .hljs-link, html[data-theme="dark"] .hljs-meta, html[data-theme="dark"] .hljs-selector-id, html[data-theme="dark"] .hljs-title,
+html[data-theme="amoled"] .hljs-symbol, html[data-theme="amoled"] .hljs-bullet, html[data-theme="amoled"] .hljs-link, html[data-theme="amoled"] .hljs-meta, html[data-theme="amoled"] .hljs-selector-id, html[data-theme="amoled"] .hljs-title { color: #61aeee; }
+html[data-theme="dark"] .hljs-emphasis,
+html[data-theme="amoled"] .hljs-emphasis { font-style: italic; }
+html[data-theme="dark"] .hljs-strong,
+html[data-theme="amoled"] .hljs-strong { font-weight: bold; }
+html[data-theme="dark"] .hljs-link,
+html[data-theme="amoled"] .hljs-link { text-decoration: underline; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs { display: block; overflow-x: auto; color: #abb2bf; background: #282c34; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-comment, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-quote { color: #5c6370; font-style: italic; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-doctag, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-keyword, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-formula { color: #c678dd; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-section, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-name, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-selector-tag, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-deletion, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-subst { color: #e06c75; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-literal { color: #56b6c2; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-string, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-regexp, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-addition, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-attribute, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-meta-string { color: #98c379; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-built_in, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-class .hljs-title { color: #e6c07b; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-attr, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-variable, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-template-variable, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-type, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-selector-class, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-selector-attr, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-selector-pseudo, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-number { color: #d19a66; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-symbol, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-bullet, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-link, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-meta, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-selector-id, html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-title { color: #61aeee; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-emphasis { font-style: italic; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-strong { font-weight: bold; }
+  html:not([data-theme="deloma"]):not([data-theme="light"]) .hljs-link { text-decoration: underline; }
+}
 
 /*! cuetip v1.1.3 | MIT License | https://pinjasaur.github.io/cuetip/ */
 [data-tooltip]{position:relative;cursor:inherit}[data-tooltip]:not(.tooltip--no-tail)::before{display:none;pointer-events:none;position:absolute;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%;z-index:9999;content:"";bottom:calc(100% - .25em + .2em);border-width:.25em;border-style:solid;border-color:#333 transparent transparent transparent}[data-tooltip].tooltip--top:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;bottom:calc(100% - .25em + .2em);border-color:#333 transparent transparent transparent;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--right:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;left:calc(100% - .25em + .2em);border-color:transparent #333 transparent transparent;-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip].tooltip--bottom:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;top:calc(100% - .25em + .2em);border-color:transparent transparent #333 transparent;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--left:not(.tooltip--no-tail)::before{top:auto;right:auto;bottom:auto;left:auto;right:calc(100% - .25em + .2em);border-color:transparent transparent transparent #333;-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip]::after{display:none;pointer-events:none;position:absolute;-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%;z-index:9999;content:attr(data-tooltip);white-space:nowrap;background:#333;color:#fff;padding:.25em;border-radius:.1em;bottom:calc(100% + .25em + .2em)}[data-tooltip].tooltip--top::after{top:auto;right:auto;bottom:auto;left:auto;bottom:calc(100% + .25em + .2em);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--right::after{top:auto;right:auto;bottom:auto;left:auto;left:calc(100% + .25em + .2em);-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip].tooltip--bottom::after{top:auto;right:auto;bottom:auto;left:auto;top:calc(100% + .25em + .2em);-webkit-transform:translateX(-50%);transform:translateX(-50%);left:50%}[data-tooltip].tooltip--left::after{top:auto;right:auto;bottom:auto;left:auto;right:calc(100% + .25em + .2em);-webkit-transform:translateY(-50%);transform:translateY(-50%);top:50%}[data-tooltip]:not(.tooltip--no-tail):hover::before{display:inline-block}[data-tooltip]:hover::after{display:inline-block}
@@ -404,7 +429,27 @@ abbr[data-tooltip] {
  *
  */
 
-html {
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]),
+  html:not([data-theme="deloma"]) {
+    --accent: #fff91a;
+    --bg: rgb(16, 18, 22);
+    --fg: rgb(252, 250, 253);
+    --hover-bg: rgba(255, 255, 255, .02);
+  }
+
+  html:not([data-theme="light"]):not([data-theme="deloma"]) img { filter: brightness(.8) contrast(1.2); }
+  html:not([data-theme="light"]):not([data-theme="deloma"])  #logo img { filter: invert(1); }
+}
+
+html[data-theme="dark"] img,
+html[data-theme="amoled"] img { filter: brightness(.8) contrast(1.2); }
+
+html[data-theme="dark"] #logo img,
+html[data-theme="amoled"] #logo img { filter: invert(1); }
+
+html,
+html[data-theme="light"] {
   --accent: #6d14e9;
   --bg: rgb(252, 250, 253);
   --fg: rgb(16, 18, 22);
