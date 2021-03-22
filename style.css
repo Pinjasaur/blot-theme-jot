@@ -233,6 +233,7 @@ iframe {width: 100%;}
 .margin, .inside {
   box-sizing: border-box;
   width: 29.3333%;
+  z-index: 1;
 }
 
 .margin {  position: absolute;}
