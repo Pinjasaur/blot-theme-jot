@@ -438,12 +438,12 @@ abbr[data-tooltip] {
     --hover-bg: rgba(255, 255, 255, .02);
   }
 
-  html:not([data-theme="light"]):not([data-theme="deloma"]) img { filter: brightness(.8) contrast(1.2); }
+  html:not([data-theme="light"]):not([data-theme="deloma"]) img:not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
   html:not([data-theme="light"]):not([data-theme="deloma"])  #logo img { filter: invert(1); }
 }
 
-html[data-theme="dark"] img,
-html[data-theme="amoled"] img { filter: brightness(.8) contrast(1.2); }
+html[data-theme="dark"] img:not(.zoom-img):not(:hover),
+html[data-theme="amoled"] img:not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
 
 html[data-theme="dark"] #logo img,
 html[data-theme="amoled"] #logo img { filter: invert(1); }
