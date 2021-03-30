@@ -65,53 +65,47 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   // Initial CTA values
   if (localStorage.getItem('theme')) {
-    $theme.text('Theme: Dark')
-  } else {
-    $theme.text('Theme: Light')
+    $theme.find('option[value="' + localStorage.getItem('theme') + '"]').prop('selected', 'selected')
   }
 
   if (localStorage.getItem('shortcuts')) {
-    $shortcuts.text('Shortcuts: Enabled')
-  } else {
-    $shortcuts.text('Shortcuts: Disabled')
+    $shortcuts.find('option[value="' + localStorage.getItem('shortcuts') + '"]').prop('selected', 'selected')
   }
 
   // Handle theme change
-  $theme.on('click', function (event) {
-    event.preventDefault()
-
-    if (localStorage.getItem('theme')) {
+  $theme.on('change', function (event) {
+    if ($(this).val()) {
+      localStorage.setItem('theme', $(this).val())
+      $html.attr('data-theme', $(this).val())
+    } else {
       localStorage.removeItem('theme')
       $html.removeAttr('data-theme')
-      $theme.text('Theme: Light')
-    } else {
-      localStorage.setItem('theme', 'dark')
-      $html.attr('data-theme', 'dark')
-      $theme.text('Theme: Dark')
     }
   })
 
   // Handle shortcut change
-  $shortcuts.on('click', function (event) {
-    event.preventDefault()
-
-    if (localStorage.getItem('shortcuts')) {
+  $shortcuts.on('change', function (event) {
+    if (!$(this).val()) {
       localStorage.removeItem('shortcuts')
-      $shortcuts.text('Shortcuts: Disabled')
     } else {
-      if (confirm(
-        'Enable shortcuts?\n\n' +
-        'h - newer post(s)\n' +
-        'j - scroll down\n' +
-        'k - scroll up\n' +
-        'l - older post(s)\n' +
-        '? - help'
-      )) {
-        localStorage.setItem('shortcuts', true)
-        $shortcuts.text('Shortcuts: Enabled')
-      }
+      localStorage.setItem('shortcuts', true)
+      shortcuts()
     }
   })
+
+  function shortcuts () {
+    var state = localStorage.getItem('shortcuts') ? 'enabled' : 'disabled'
+    alert(
+      'Shortcuts (' + state + '):\n\n' +
+      'key \t | \t action\n' +
+      '--- \t   \t ---\n' +
+      'h \t | \t newer post(s)\n' +
+      'j \t | \t scroll down\n' +
+      'k \t | \t scroll up\n' +
+      'l \t | \t older post(s)\n' +
+      '? \t | \t help (this)'
+    )
+  }
 
   // h: newer post(s)
   Mousetrap.bind('h', function () {
@@ -147,18 +141,8 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
         location.href = $('.js-older').attr('href')
   })
 
-  // ? - help
-  Mousetrap.bind('?', function () {
-    var state = localStorage.getItem('shortcuts') ? 'enabled' : 'disabled'
-    alert(
-      'Shortcuts (' + state + '):\n\n' +
-      'h - newer post(s)\n' +
-      'j - scroll down\n' +
-      'k - scroll up\n' +
-      'l - older post(s)\n' +
-      '? - help'
-    )
-  })
+  // ?: help
+  Mousetrap.bind('?', shortcuts)
 
   // For the luls
   console.log(
