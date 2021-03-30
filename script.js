@@ -74,8 +74,6 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   // Handle theme change
   $theme.on('change', function (event) {
-    event.preventDefault()
-
     if ($(this).val()) {
       localStorage.setItem('theme', $(this).val())
       $html.attr('data-theme', $(this).val())
@@ -87,23 +85,27 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   // Handle shortcut change
   $shortcuts.on('change', function (event) {
-    event.preventDefault()
-
     if (!$(this).val()) {
       localStorage.removeItem('shortcuts')
     } else {
-      if (confirm(
-        'Enable shortcuts?\n\n' +
-        'h - newer post(s)\n' +
-        'j - scroll down\n' +
-        'k - scroll up\n' +
-        'l - older post(s)\n' +
-        '? - help'
-      )) {
-        localStorage.setItem('shortcuts', true)
-      }
+      localStorage.setItem('shortcuts', true)
+      shortcuts()
     }
   })
+
+  function shortcuts () {
+    var state = localStorage.getItem('shortcuts') ? 'enabled' : 'disabled'
+    alert(
+      'Shortcuts (' + state + '):\n\n' +
+      'key \t | \t action\n' +
+      '--- \t   \t ---\n' +
+      'h \t | \t newer post(s)\n' +
+      'j \t | \t scroll down\n' +
+      'k \t | \t scroll up\n' +
+      'l \t | \t older post(s)\n' +
+      '? \t | \t help (this)'
+    )
+  }
 
   // h: newer post(s)
   Mousetrap.bind('h', function () {
@@ -139,18 +141,8 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
         location.href = $('.js-older').attr('href')
   })
 
-  // ? - help
-  Mousetrap.bind('?', function () {
-    var state = localStorage.getItem('shortcuts') ? 'enabled' : 'disabled'
-    alert(
-      'Shortcuts (' + state + '):\n\n' +
-      'h - newer post(s)\n' +
-      'j - scroll down\n' +
-      'k - scroll up\n' +
-      'l - older post(s)\n' +
-      '? - help'
-    )
-  })
+  // ?: help
+  Mousetrap.bind('?', shortcuts)
 
   // For the luls
   console.log(
