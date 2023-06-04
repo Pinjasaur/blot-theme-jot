@@ -1,11 +1,16 @@
 {{! Note the double underscore prefix: my convention for a partial partial }}
+{{! Context: https://paul.af/applying-hungarian-notation-to-mustache-partials }}
 <a href="{{url}}" class="{{#archives.length}}archive {{/archives.length}}row">
   <b>{{title}}</b>
-  {{#date}}
-  &lt;&nbsp;<small style="white-space: nowrap;">{{date}}</small>&nbsp;/&gt;
-  {{/date}}
   {{#metadata.tldr}}
   <br>
   <small><span style="color: var(--fg)">tl;dr:</span> {{{metadata.tldr}}}</small>
   {{/metadata.tldr}}
+  {{#date}}
+  <br>
+  <small style="white-space: nowrap;" title="{{#formatDate}}{{/formatDate}}">{{date}}</small>
+  {{/date}}
+  {{#tagged.draft}}
+  <small class="tag">draft</small>
+  {{/tagged.draft}}
 </a>

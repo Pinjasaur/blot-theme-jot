@@ -18,7 +18,7 @@
 
     {{#date}}
     <p class="entry-date">
-      <small>Published {{date}}</small>
+      <small title="{{#formatDate}}{{/formatDate}}">Published {{date}}</small>
     </p>
     {{/date}}
 
@@ -26,11 +26,11 @@
 
     {{#entry.updated}}
     <p>
-      <small>Last modified {{#formatUpdated}}MMMM D, YYYY{{/formatUpdated}}</small>
+      <small title="{{#formatUpdated}}{{/formatUpdated}}">Last modified {{#formatUpdated}}MMMM D, YYYY{{/formatUpdated}}</small>
       {{#tags.length}}
       <small>
         {{#tags}}
-          <a href="/tagged/{{slug}}">#{{name}}</a>  
+          <a href="/tagged/{{slug}}">#{{name}}</a>
         {{/tags}}
       </small>
       {{/tags.length}}
@@ -45,13 +45,13 @@
 
   <div class="text-center">
     {{#next}}
-    <small><a href="{{url}}" class="js-newer">&larr; Newer post</a></small>
+    <small><a href="{{url}}" class="js-newer">&larr; Newer post</a></small>
     {{/next}}
 
     {{#next}}{{#previous}}<small>&nbsp;&bullet;&nbsp;</small>{{/previous}}{{/next}}
 
     {{#previous}}
-    <small><a href="{{url}}" class="js-older">Older post &rarr;</a></small>
+    <small><a href="{{url}}" class="js-older">Older post &rarr;</a></small>
     {{/previous}}
   </div>
 

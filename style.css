@@ -519,6 +519,19 @@ html[data-theme="deloma"] {
 }
 */
 
+.tag {
+  text-transform: uppercase;
+  background-color: var(--accent);
+  color: var(--bg);
+  font-size: .8em;
+  letter-spacing: .05em;
+  padding: .15em .3em;
+  border-radius: 1px;
+  vertical-align: text-top;
+  font-weight: bold;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
 kbd {
   background-color: var(--hover-bg);
   border: 1px solid #c6cbd1;

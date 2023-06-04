@@ -6,9 +6,13 @@
   {{> _header}}
 
   <form action="/search" class="search-form">
-    <input class="search__input" name="q" type="search" placeholder="Enter a search term&hellip;" value="{{#query}}{{query}}{{/query}}" autofocus>
+    <input class="search__input" name="q" type="search" placeholder="Enter a query e.g. coffee" value="{{#query}}{{query}}{{/query}}" autofocus>
     <input class="search__button" type="submit" value="Search">
   </form>
+
+  <p>
+    You may also be interested in browsing the <a style="text-decoration: underline" href="/tags">tags</a>.
+  </p>
 
   <br>
 
