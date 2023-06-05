@@ -39,8 +39,6 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
     var $el = $(this);
 
-    $el.addClass("header-has-hash");
-
     var idToLink = slugify($el.text()) + '-' + index;
 
     var $headerLink = $("<a />", {

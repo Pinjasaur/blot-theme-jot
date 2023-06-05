@@ -578,16 +578,10 @@ img.zoom-img {
   display: block;
 }
 
-.entry .header-has-hash {
-  position: relative;
-  padding-left: .5em;
-}
-
 a.header-hash {
-  position: absolute;
-  top: .2em;
-  left: .25em;
+  margin: 0;
   padding: 0;
+  padding-right: .25em;
   text-decoration: none;
   color: #9e9e9e;
 }
