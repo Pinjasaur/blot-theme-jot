@@ -16,6 +16,19 @@
     <img class="entry-featured" src="{{{entry.thumbnail.large.url}}}" alt="Featured image for {{title}}">
     {{/entry.thumbnail}}{{/metadata.feat}}
 
+    {{#tagged.draft}}
+    <details>
+      <summary>👋 Psst, this is a <small class="tag">draft</small>!</summary>
+      <p>
+        Just a quick note: this is a <small class="tag">draft</small> entry.
+        That is, an entry literally tagged <code>draft</code> which I&rsquo;ve
+        published. The quality may be lower than typical a benchmark post,
+        although that is personal distinction. You can read more in my
+        <a href="/publishing-drafts">announcement</a>. Cheers.
+      </p>
+    </details>
+    {{/tagged.draft}}
+
     {{#date}}
     <p class="entry-date">
       <small title="{{#formatDate}}{{/formatDate}}">Published {{date}}</small>
