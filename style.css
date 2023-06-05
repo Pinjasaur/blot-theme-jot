@@ -552,6 +552,12 @@ del {
   opacity: .7;
 }
 
+ins {
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--bg)
+}
+
 abbr[title] {
   cursor: help;
 }
