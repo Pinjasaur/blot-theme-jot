@@ -8,25 +8,23 @@ mkdir -p .tmp
 
 # https://paul.af/
 
-capture-website https://"${FQDN:-paul.af}"/ \
+npx capture-website-cli https://"${FQDN:-paul.af}"/ \
   --width=1600 --height=900 --delay=1 \
   > .tmp/index-light.png &
 
-# --script='localStorage.theme = "dark"; location.reload()' \
-capture-website https://"${FQDN:-paul.af}"/ \
+npx capture-website-cli https://"${FQDN:-paul.af}"/ \
   --dark-mode \
   --width=1600 --height=900 --delay=1 \
   > .tmp/index-dark.png &
 
 # https://paul.af/maple-cream
 
-capture-website https://"${FQDN:-paul.af}"/maple-cream \
+npx capture-website-cli https://"${FQDN:-paul.af}"/maple-cream \
   --width=1600 --height=900 --delay=1 \
   --scroll-to-element=footer \
   > .tmp/post-light.png &
 
-# --script='localStorage.theme = "dark"; location.reload()' \
-capture-website https://"${FQDN:-paul.af}"/maple-cream \
+npx capture-website-cli https://"${FQDN:-paul.af}"/maple-cream \
   --dark-mode \
   --width=1600 --height=900 --delay=1 \
   --scroll-to-element=footer \
