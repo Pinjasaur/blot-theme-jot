@@ -22,7 +22,7 @@
       "partials": {
         "title": "{{{title}}}",
         "description": "The latest entries posted on {{{title}}}",
-        "canonical": "{{{blogURL}}}/{{#pagination.previous}}page/{{pagination.current}}{{/pagination.previous}}"
+        "canonical": "{{{blogURL}}}/page/{{pagination.current}}"
       }
     },
     "tagged.html": {

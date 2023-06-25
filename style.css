@@ -574,6 +574,10 @@ img.zoom-img {
   cursor: zoom-out;
 }
 
+details > summary {
+  cursor: pointer;
+}
+
 .archive {
   display: block;
 }

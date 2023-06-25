@@ -50,6 +50,15 @@
     </p>
     {{/entry.updated}}
 
+    {{#backlinks}}
+    <details>
+      <summary>🔗 Backlinks</summary>
+      <ul>
+        <li><a href="{{{url}}}">{{title}}</a></li>
+      </ul>
+    </details>
+    {{/backlinks}}
+
     {{> pluginHTML}}
 
   </article>
