@@ -50,14 +50,16 @@
     </p>
     {{/entry.updated}}
 
-    {{#backlinks}}
+    {{#backlinks.length}}
     <details>
       <summary>🔗 Backlinks</summary>
       <ul>
+        {{#backlinks}}
         <li><a href="{{{url}}}">{{title}}</a></li>
+        {{/backlinks}}
       </ul>
     </details>
-    {{/backlinks}}
+    {{/backlinks.length}}
 
     {{> pluginHTML}}
 
@@ -65,6 +67,8 @@
 
   <hr>
 
+  {{! There are no prev/next nav for pages, only posts }}
+  {{^entry.page}}
   <div class="text-center">
     {{#next}}
     <small><a href="{{url}}" class="js-newer">&larr; Newer post</a></small>
@@ -76,6 +80,7 @@
     <small><a href="{{url}}" class="js-older">Older post &rarr;</a></small>
     {{/previous}}
   </div>
+  {{/entry.page}}
 
   {{#adjacent}}
   <br>
