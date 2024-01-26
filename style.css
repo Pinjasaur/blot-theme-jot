@@ -438,15 +438,15 @@ abbr[data-tooltip] {
     --hover-bg: rgba(255, 255, 255, .02);
   }
 
-  html:not([data-theme="light"]):not([data-theme="deloma"]) img:not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
-  html:not([data-theme="light"]):not([data-theme="deloma"])  #logo img { filter: invert(1); }
+  html:not([data-theme="light"]):not([data-theme="deloma"]) img:not(.invertable):not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
+  html:not([data-theme="light"]):not([data-theme="deloma"]) img.invertable { filter: invert(1); }
 }
 
-html[data-theme="dark"] img:not(.zoom-img):not(:hover),
-html[data-theme="amoled"] img:not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
+html[data-theme="dark"] img:not(.invertable):not(.zoom-img):not(:hover),
+html[data-theme="amoled"] img:not(.invertable):not(.zoom-img):not(:hover) { filter: brightness(.8) contrast(1.2); }
 
-html[data-theme="dark"] #logo img,
-html[data-theme="amoled"] #logo img { filter: invert(1); }
+html[data-theme="dark"] img.invertable,
+html[data-theme="amoled"] img.invertable { filter: invert(1); }
 
 html,
 html[data-theme="light"] {

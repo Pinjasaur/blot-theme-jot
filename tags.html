@@ -20,6 +20,9 @@
     {{#all_tags}}
     <li>
       <a href="/tagged/{{slug}}">{{name}}</a>
+      {{#entries.length}}
+      <small>({{entries.length}})</small>
+      {{/entries.length}}
     </li>
     {{/all_tags}}
   </ul>

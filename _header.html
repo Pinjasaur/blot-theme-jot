@@ -2,15 +2,17 @@
 
   <a href="/" id="logo">
     {{#avatar}}
-    <img src="{{{avatar_url}}}" class="{{#roundAvatar}}rounded{{/roundAvatar}}" alt="{{title}}">
+    <img src="{{{avatar_url}}}" class="{{#roundAvatar}}rounded{{/roundAvatar}} invertable" alt="{{title}}">
     {{/avatar}}
     <h1 class="title">{{title}}</h1>
   </a>
   <br>
 
-  {{#menu}}
-  <a class="menu" href="{{{url}}}" title="{{label}}">{{label}}</a>
-  {{/menu}}
+  <nav>
+    {{#menu}}
+    <a class="menu" href="{{{url}}}" title="{{label}}">{{label}}</a>
+    {{/menu}}
+  </nav>
 
   <hr>
 
