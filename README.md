@@ -5,12 +5,12 @@ theme.
 
 ## Features
 
-- Light and dark theme(!!)
+- Light and dark themes(!!)
 - Navigational keyboard shortcuts (<kbd>h</kbd>, <kbd>j</kbd>, <kbd>k</kbd>, and <kbd>l</kbd>)
 - Hash `id`s for each header
 - `is-active` class for active menu links
 - Outlined footnotes & refs when `:target`ed
-- Canonicalized URLs (`/` is canonical of `/page/1`)
+- Canonicalized URLs
 - OpenGraph image `<meta>` from thumbnails
 - Display last-modified date in entries
 - [instant.page] for just-in-time preloading
@@ -21,9 +21,9 @@ theme.
 
 ## Screenshots
 
-![Index Light](/screenshots/index-light.png)
+![Blog Light](/screenshots/blog-light.png)
 
-![Index Dark](/screenshots/index-dark.png)
+![Blog Dark](/screenshots/blog-dark.png)
 
 ![Post Light](/screenshots/post-light.png)
 

@@ -6,16 +6,16 @@
 FAILED=0
 mkdir -p .tmp
 
-# https://paul.af/
+# https://paul.af/page/1
 
-npx capture-website-cli https://"${FQDN:-paul.af}"/ \
+npx capture-website-cli https://"${FQDN:-paul.af}"/page/1 \
   --width=1600 --height=900 --delay=1 \
-  > .tmp/index-light.png &
+  > .tmp/blog-light.png &
 
-npx capture-website-cli https://"${FQDN:-paul.af}"/ \
+npx capture-website-cli https://"${FQDN:-paul.af}"/page/1 \
   --dark-mode \
   --width=1600 --height=900 --delay=1 \
-  > .tmp/index-dark.png &
+  > .tmp/blog-dark.png &
 
 # https://paul.af/maple-cream
 
