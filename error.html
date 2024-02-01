@@ -6,6 +6,12 @@
 
   <h1>{{error.title}}</h1>
   <p>{{error.message}}</p>
+  <p>
+    You could try <a style="text-decoration: underline" href="/search">searching</a>.
+    <script>
+      document.write(`Or <a style="text-decoration: underline" href="${document.referrer || "javascript:history.back()"}">going back</a>.`);
+    </script>
+  </p>
 
   <br><br>
 
