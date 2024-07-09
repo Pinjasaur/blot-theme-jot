@@ -1,8 +1,7 @@
 {
   "name": "Jot",
   "locals": {
-    "page_size": "10",
-    "deploy_date": "n/a"
+    "page_size": "10"
   },
   "views": {
     "archives.html": {

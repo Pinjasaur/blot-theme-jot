@@ -1,2 +1,9 @@
-{{{analytics}}}
+{{#analytics_url}}
+<script data-goatcounter="{{{analytics_url}}}" async src="//gc.zgo.at/count.js"></script>
+{{#entry.metadata.link}}
+<noscript>
+  <img src="{{{analytics_url}}}?p={{{entry.metadata.link}}}">
+</noscript>
+{{/entry.metadata.link}}
 <!-- Last deploy.sh: {{{deploy_date}}} -->
+{{/analytics_url}}
