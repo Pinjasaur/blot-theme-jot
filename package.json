@@ -1,7 +1,9 @@
 {
   "name": "Jot",
   "locals": {
-    "page_size": "10"
+    "page_size": "10",
+    "reply_email": "invalid@example.com",
+    "reply_rss_email": "invalid+rss@example.com"
   },
   "views": {
     "archives.html": {
