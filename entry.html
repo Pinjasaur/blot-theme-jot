@@ -37,6 +37,7 @@
 
     {{{body}}}
 
+    {{^entry.page}}
     <hr>
     <p>
       <small>I love hearing from readers so please feel free to reach out.</small>
@@ -44,6 +45,7 @@
     <p>
       <a href="mailto:{{{reply_email}}}?subject=Re: {{title}}&body=Permalink: {{absoluteURL}}">Reply via email</a>
     </p>
+    {{/entry.page}}
 
     {{#entry.updated}}
     <p>
