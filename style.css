@@ -128,7 +128,7 @@ a.footnote-back {
 
 code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: rgba(0,0,0,.03);
+  background-color: var(--hover-bg);
   border-radius: 4px;
   font-size: smaller;
   line-height: inherit;
@@ -138,8 +138,9 @@ code {
 p code,
 li code {
   line-height: 1em;
-  padding: 2px;
-  display: inline-block;
+  padding: .2em .4em;
+  /* display: inline-block; */
+  white-space: break-spaces;
 }
 
 pre code {
