@@ -31,7 +31,7 @@
 
     {{#date}}
     <p class="entry-date">
-      <small title="{{#formatDate}}{{/formatDate}}">Published {{date}}</small>
+      <small title="{{#formatDate}}{{/formatDate}}">Published <time datetime="{{#formatDate}}{{/formatDate}}">{{date}}</time></small>
     </p>
     {{/date}}
 
@@ -49,7 +49,7 @@
 
     {{#entry.updated}}
     <p>
-      <small title="{{#formatUpdated}}{{/formatUpdated}}">Last modified {{#formatUpdated}}MMMM D, YYYY{{/formatUpdated}}</small>
+      <small title="{{#formatUpdated}}{{/formatUpdated}}">Last modified <time datetime="{{#formatUpdated}}{{/formatUpdated}}">{{#formatUpdated}}MMMM D, YYYY{{/formatUpdated}}</time></small>
       {{#tags.length}}
       <small>
         {{#tags}}
