@@ -609,10 +609,6 @@ h1 + small {
   margin-top: -.625em;
 }
 
-.archive {
-  display: block;
-}
-
 a.header-hash {
   margin: 0;
   padding: 0;
