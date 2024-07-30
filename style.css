@@ -619,7 +619,15 @@ a.header-hash {
 
 a.header-hash:hover {
   background: none;
+  text-decoration: underline;
+}
+
+:has(a.header-hash):hover > a.header-hash {
   color: var(--accent);
+}
+
+:has(a.header-hash):target {
+  border-bottom: 1px dashed var(--accent);
 }
 
 .archive + .entries {

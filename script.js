@@ -23,8 +23,17 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
 (function() {
 
-  // Thanks CodePen:
-  // https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
+  /**
+   * Add the nice hash-link to headers.
+   * Inspired by CodePen: https://blog.codepen.io/2016/11/17/anchor-links-post-headers/
+   *
+   * The main goal is to keep slugs as "clean" as possible:
+   * 1. if possible, use the `id` already on the element
+   * 2. if not, `slugify` the contents of the element
+   * 3. check for any duplicates from the above steps
+   * 4. finally, append a unique number to duplicates
+   */
+
   function slugify (text) {
     return text.toString().toLowerCase().trim()
       .replace(/\s+/g, '-') // Replace spaces with -
@@ -33,19 +42,28 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
       .replace(/\-\-+/g, '-'); // Replace multiple - with single -
   }
 
-  var $headers = $(".entry :header:not(h1:first-child)");
+  var $headers = $("article :header:not(h1:first-child)");
 
-  $headers.each(function(index) {
+  // Get all slugs before doing anything else
+  const slugs = Array.from($headers.map((_, header) => $(header).attr("id") || slugify($(header).text())))
+  // Find duplicates (to make them unique later)
+  const dupes = slugs.reduce((acc, slug, index, slugs) => slugs.indexOf(slug) !== index && acc.indexOf(slug) === -1 ? acc.concat(slug) : acc, [])
+  // Seed the unique number
+  let uniq = 0
+
+  $headers.each(function() {
 
     var $el = $(this);
+    let slug = $el.attr("id") || slugify($el.text())
+    slug = (dupes.includes(slug)) ? `${slug}-${uniq++}` : slug
 
-    var idToLink = slugify($el.text()) + '-' + index;
+    if (!$el.attr("id"))
+      $el.attr("id", slug)
 
     var $headerLink = $("<a />", {
       html: "#",
       class: "header-hash",
-      href: "#" + idToLink,
-      id: idToLink
+      href: `#${slug}`,
     });
 
     $el.prepend($headerLink);
@@ -54,7 +72,7 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   // Add class for active menu links
   $('.header a.menu')
-    .filter((i, el) => $(el).attr('href') === location.pathname)
+    .filter((_, el) => $(el).attr('href') === location.pathname)
     .addClass('is-active')
 
   var $theme = $('.js-theme')
