@@ -656,7 +656,8 @@ a.header-hash:hover {
 .entry-date small {
   display: inline-block;
   padding-bottom: .5em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #888;
+  border-bottom: 1px solid color-mix(in srgb, var(--fg) 20%, transparent);
 }
 
 .entry-featured {
@@ -681,6 +682,12 @@ a.header-hash:hover {
   bottom: .1em;
   height: .2em;
   background-color: var(--accent);
+}
+
+small,
+.caption,
+blockquote {
+  color: color-mix(in srgb, var(--fg) 75%, transparent);
 }
 
 blockquote {
