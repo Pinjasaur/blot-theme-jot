@@ -592,6 +592,11 @@ details > summary {
   cursor: pointer;
 }
 
+article aside {
+  color: var(--fg);
+  background-color: color-mix(in srgb, var(--fg) 10%, transparent);
+}
+
 aside {
   padding: .5rem 1rem;
   margin: 0.5rem auto;
