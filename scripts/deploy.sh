@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Deploy to the live Blot template
 
 set -e
 

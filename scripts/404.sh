@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+#
+# Check for internal 404s
+
 
 # Strict settings
 set -o errexit

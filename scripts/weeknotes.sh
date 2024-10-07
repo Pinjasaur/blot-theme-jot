@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#
+# Creates weeknotes file.
 
 yyyyww="$(date +%Y-W%W)"
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Uses `capture-website` to get screenshots.
+# Uses `capture-website` to get screenshots (used in the README).
 # https://github.com/sindresorhus/capture-website-cli
 
 FAILED=0
