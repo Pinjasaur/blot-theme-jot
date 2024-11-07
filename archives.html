@@ -16,9 +16,10 @@
   </p>
 
   {{#archives}}
-  {{#months}}
+  <h2 class="archive">{{year}}&nbsp;&nbsp;<small>{{total}} post{{s}}</small></h2>
 
-  <h3 class="archive">{{month}} {{year}}&nbsp;&nbsp;<small>{{entries.length}} post{{s}}</small></h3>
+  {{#months}}
+  <h3 class="archive">{{month}}&nbsp;&nbsp;<small>{{entries.length}} post{{s}}</small></h3>
 
   <div class="entries">
     {{#entries}}
