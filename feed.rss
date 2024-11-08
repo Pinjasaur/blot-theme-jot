@@ -22,7 +22,7 @@
           I love hearing from readers so please feel free to reach out.
         </small></p>
         <p>
-          <a href="mailto:{{{reply_rss_email}}}?subject=Re: {{title}}&body=Permalink: {{absoluteURL}}">Reply via email</a>
+          <a href="mailto:{{{reply_rss_email}}}?subject=Re: {{title}}&body=Re: {{absoluteURL}}">Reply via email</a>
           &bullet;
           <a href="/subscribe">Subscribe via RSS or email</a>
         </p>
