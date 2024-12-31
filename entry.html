@@ -82,15 +82,19 @@
   {{! There are no prev/next nav for pages, only posts }}
   {{^entry.page}}
   <div class="text-center">
+    <small>
     {{#next}}
-    <small><a href="{{url}}" class="js-newer">&larr; Newer post</a></small>
+    <a href="{{url}}" class="js-newer">&larr; Newer</a>
+    &nbsp;&bullet;&nbsp;
     {{/next}}
 
-    {{#next}}{{#previous}}<small>&nbsp;&bullet;&nbsp;</small>{{/previous}}{{/next}}
+    <a href="/random">Random</a>
 
     {{#previous}}
-    <small><a href="{{url}}" class="js-older">Older post &rarr;</a></small>
+    &nbsp;&bullet;&nbsp;
+    <a href="{{url}}" class="js-older">Older &rarr;</a>
     {{/previous}}
+    </small>
   </div>
   {{/entry.page}}
 
