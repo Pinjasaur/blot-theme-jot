@@ -53,14 +53,14 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   $headers.each(function() {
 
-    var $el = $(this);
+    const $el = $(this);
     let slug = $el.attr("id") || slugify($el.text())
     slug = (dupes.includes(slug)) ? `${slug}-${uniq++}` : slug
 
     if (!$el.attr("id"))
       $el.attr("id", slug)
 
-    var $headerLink = $("<a />", {
+    const $headerLink = $("<a />", {
       html: "#",
       class: "header-hash",
       href: `#${slug}`,
@@ -70,14 +70,31 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   });
 
+  if (navigator.canShare({ url: location.href, text: document.title })) {
+    const $button = $("<button>")
+      .text("Share this post")
+      .click(async function () {
+        try {
+          await navigator.share({
+            url: location.href,
+            text: document.title
+          })
+          $(this).text("Shared!")
+        } catch (error) {
+          $(this).text(`Error: ${error.message}`)
+        }
+      })
+    $(".entry").append($("<p>").append($button))
+  }
+
   // Add class for active menu links
   $('.header a.menu')
     .filter((_, el) => $(el).attr('href') === location.pathname)
     .addClass('is-active')
 
-  var $theme = $('.js-theme')
-  var $shortcuts = $('.js-shortcuts')
-  var $html = $('html')
+  const $theme = $('.js-theme')
+  const $shortcuts = $('.js-shortcuts')
+  const $html = $('html')
 
   // Initial CTA values
   if (localStorage.getItem('theme')) {
