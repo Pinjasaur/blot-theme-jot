@@ -72,7 +72,7 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   if (navigator.canShare({ url: location.href, text: document.title })) {
     const $button = $("<button>")
-      .text("Share this post")
+      .text("Share this")
       .click(async function () {
         try {
           await navigator.share({
@@ -84,7 +84,7 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
           $(this).text(`Error: ${error.message}`)
         }
       })
-    $(".entry").append($("<p>").append($button))
+    $(".js-entry").append($("<p>").append($button))
   }
 
   // Add class for active menu links
