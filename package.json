@@ -2,6 +2,7 @@
   "name": "Jot",
   "locals": {
     "page_size": "10",
+    "tagged_page_size": "200",
     "reply_email": "invalid@example.com",
     "reply_rss_email": "invalid+rss@example.com"
   },
