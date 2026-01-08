@@ -70,9 +70,11 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
 
   });
 
+  // Dynamically add a share button
   if (navigator.canShare({ url: location.href, text: document.title })) {
+    const text = $(".entry-title").text().trim() ? `〝${$(".entry-title").text().trim()}〞` : "this"
     const $button = $("<button>")
-      .text("Share this")
+      .text(`Share ${text}`)
       .click(async function () {
         try {
           await navigator.share({
@@ -84,6 +86,7 @@ arguments)}}(b))};e.init();p.Mousetrap=e;"undefined"!==typeof module&&module.exp
           $(this).text(`Error: ${error.message}`)
         }
       })
+    // Only below entries
     $(".js-entry").append($("<p>").append($button))
   }
 
