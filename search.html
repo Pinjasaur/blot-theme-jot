@@ -18,7 +18,7 @@
 
   {{#query}}
   {{#entries.length}}
-  <p>{{entries.length}} results found for &ldquo;<mark><u><em>{{query}}</em></u></mark>&rdquo;</p>
+  <p>{{entries.length}} result{{#entries.1}}s{{/entries.1}} found for &ldquo;<mark><u><em>{{query}}</em></u></mark>&rdquo;</p>
   {{/entries.length}}
   {{^entries}}
   <p>Sorry, nothing found for &ldquo;<mark><u><em>{{query}}</em></u></mark>&rdquo;</p>
