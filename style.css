@@ -566,7 +566,8 @@ del {
   opacity: .7;
 }
 
-ins {
+ins,
+mark {
   text-decoration: none;
   background-color: var(--accent);
   color: var(--bg)
