@@ -2,7 +2,7 @@
 #
 # Creates weeknotes file.
 
-yyyyww="$(date +%Y-W%W)"
+yyyyww="$(date +%G-W%V)"
 
 mkdir -p "$(dirname "$0")"/../../../drafts/-
 if ! [[ -w "$(dirname "$0")"/../../../drafts/-/"${yyyyww,,}".md ]]; then
