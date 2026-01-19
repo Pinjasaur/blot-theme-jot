@@ -26,6 +26,12 @@ br {width: 100%;clear: both;float: none;}
 
 hr.skinny { margin: 1em 0 }
 
+article > hr {
+  width: 50%;
+  margin: 2em auto;
+  border-color: var(--accent);
+}
+
 blockquote {padding: 0 0 0 0.75em;color: #777}
 
 small, .caption {color: #9e9e9e;font-weight: 400;}
@@ -748,6 +754,27 @@ blockquote {
 
   60% {
     transform: scale(1.1);
+  }
+}
+
+.skeleton > span {
+  display: inline-block;
+  height: 3.2rem;
+  background: linear-gradient(90deg, var(--fg) 25%, var(--bg) 50%, var(--fg) 75%);
+  color: var(--bg);
+  padding: .5rem;
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+  border-radius: .25rem;
+  width: 100%;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
   }
 }
 
