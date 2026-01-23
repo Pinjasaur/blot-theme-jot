@@ -3,29 +3,40 @@
 # Uses `capture-website` to get screenshots (used in the README).
 # https://github.com/sindresorhus/capture-website-cli
 
+# https://useragents.io/ or just grab something real from the browser devtools
+UA='Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0'
+
 FAILED=0
 mkdir -p .tmp
 
 # https://paul.af/page/1
 
 npx capture-website-cli https://"${FQDN:-paul.af}"/page/1 \
+  --throw-on-http-error \
+  --user-agent="$UA" \
   --width=1600 --height=900 --delay=1 \
   > .tmp/blog-light.png &
 
 npx capture-website-cli https://"${FQDN:-paul.af}"/page/1 \
   --dark-mode \
+  --throw-on-http-error \
+  --user-agent="$UA" \
   --width=1600 --height=900 --delay=1 \
   > .tmp/blog-dark.png &
 
 # https://paul.af/maple-cream
 
 npx capture-website-cli https://"${FQDN:-paul.af}"/maple-cream \
+  --throw-on-http-error \
+  --user-agent="$UA" \
   --width=1600 --height=900 --delay=1 \
   --scroll-to-element=footer \
   > .tmp/post-light.png &
 
 npx capture-website-cli https://"${FQDN:-paul.af}"/maple-cream \
   --dark-mode \
+  --throw-on-http-error \
+  --user-agent="$UA" \
   --width=1600 --height=900 --delay=1 \
   --scroll-to-element=footer \
   > .tmp/post-dark.png &
